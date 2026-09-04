@@ -1,53 +1,32 @@
-<!-- Esse template de README.md é apenas uma sugestão. Lembrando que HTML funciona aqui! -->
-<!-- Ao longo do documento, algumas partes estarão comentadas e podem ser utilizadas opcionalmente. -->
+# 🐧 Campanha do Agasalho
 
-<!-- Se o projeto tiver uma logo, pode ser interessante colocá-la aqui. -->
-# Nome do Projeto
+Site da **Campanha do Agasalho da USP**, desenvolvido com o objetivo de divulgar a iniciativa e facilitar o acesso para pessoas que desejam ajudar ou conhecer mais sobre o projeto.
 
-<!-- Descreva brevemente o objetivo do projeto, será a primeira parte lida ao entrar no repositório. -->
-<!-- Links essenciais (como onde o projeto está sendo hospedado se for web) podem ficar aqui também. -->
 ## 🧪 Sobre o Projeto
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel ullamcorper nisi. Pellentesque luctus laoreet blandit. Fusce massa est, fermentum sit amet aliquet ut, viverra ut neque. Suspendisse in justo et nunc lacinia vehicula. Aliquam condimentum eros sit amet nulla auctor, non vestibulum dui volutpat. Donec vestibulum placerat consectetur. Quisque imperdiet faucibus lacus, ut fringilla neque bibendum vitae.
 
-<!-- Essa seção pode ser usada para detalhar de forma mais técnica os processos empregados no projeto. -->
+O objetivo principal é apresentar a iniciativa, divulgar as ações realizadas e facilitar o acesso de pessoas interessadas em contribuir, seja doando agasalhos, participando de eventos ou conhecendo mais sobre o trabalho desenvolvido pela campanha.
+
 ## ⚙️ Tecnologias Utilizadas
-Lorem ipsum dolor sit amet, consectetur adipiscing elit: 
-- Pellentesque
-- Vel
-- Ullamcorper
 
-Pellentesque luctus laoreet blandit. Fusce massa est, fermentum sit amet aliquet ut, viverra ut neque. Suspendisse in justo et nunc lacinia vehicula. Aliquam condimentum eros sit amet nulla auctor, non vestibulum dui volutpat. Donec vestibulum placerat consectetur. Quisque imperdiet faucibus lacus, ut fringilla neque bibendum vitae.
+- [React.js](https://reactjs.org/)
+- [Vite](https://vite.dev/)
+- [ESLint](https://eslint.org/)
+- [TailwindCSS](https://tailwindcss.com/)
 
-<!-- Descreva em detalhes como fazer o projeto rodar localmente, incluindo as depedências que devem ser instaladas. -->
-<!-- É interessante utilizar blocos de código nessa seção para mostrar os comandos que devem ser executados. -->
 ## 📝 Como Rodar
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel ullamcorper nisi. Pellentesque luctus laoreet blandit. Fusce massa est, fermentum sit amet aliquet ut, viverra ut neque:
-```javascript
-let lorem = "ipsum"
-let dolor = "sit amet"
+
+Certifique-se de ter o `Node.js` e o `npm` instalados antes de prosseguir:
+
+```bash
+# clone o projeto
+$ git clone https://github.com/USPCodeLabSanca/Campanha-do-Agasalho.git
+
+# acesse a pasta do projeto
+$ cd Campanha-do-Agasalho
+
+# instale as dependências
+$ npm install
+
+# inicie o servidor
+$ npm run dev
 ```
-Quisque imperdiet faucibus lacus, ut fringilla neque bibendum vitae.
-
-<!-- Descreva o processo de contribuir para o projeto: issues, pull requests, etc... -->
-<!-- Para projetos maiores, é interessante ter linkado aqui um documento de contribuição com ainda mais detalhes. -->
-<!--
-## 🤝 Como Contribuir
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel ullamcorper nisi. Pellentesque luctus laoreet blandit. Fusce massa est, fermentum sit amet aliquet ut, viverra ut neque.
--->
-
-<!-- Imagens do projeto rodando ou de gráficos que expliquem seu funcionamento podem ser anexados aqui. -->
-<!-- As imagens podem estar hospedadas no próprio projeto. -->
-<!--
-## 📷 Screenshots
-<img src="https://github.com/USPCodeLabSanca/Site-USPCodeLab/blob/938f77ae42d295c8856ea90fb1ed78616badd1d8/frontend/src/assets/logos/logo.png" alt="Imagem de Exemplo" width="738">
--->
-
-<!-- Em alguns casos, é interessante ter um email ou telegram de contato para o projeto. Geralmente do líder do projeto. -->
-<!--
-## ☎️ Contato
-**Email:** user@email.com
-
-**Telegram:** @user
--->
-
-
