@@ -9,6 +9,44 @@
 @theme {
   --font-display: "Milky Nice", sans-serif;
   --font-sans: "Nunito", sans-serif;
+
+  --color-blue-1: #003d5c;
+  --color-blue-2: #233e5d;
+  --color-blue-3: #294862;
+  --color-blue-4: #40708f;
+  --color-blue-5: #2e8ec2;
+  --color-blue-6: #3dace1;
+
+  --color-orange-1: #f89625;
+  --color-orange-2: #ec7229;
+  --color-orange-3: #fde7cf;
+
+  --color-pink-1: #ed457a;
+  --color-pink-2: #ff709d;
+  --color-pink-3: #ffa5c2;
+  --color-pink-4: #ffe3ec;
+
+  --color-purple-1: #73259d;
+  --color-purple-2: #a457ce;
+  --color-purple-3: #d5a6ef;
+  --color-purple-4: #e4d2ff;
+
+  --color-green-1: #2fb6be;
+  --color-green-2: #86cdd1;
+  --color-green-3: #d1eff1;
+
+  --color-gray-1: #b0b0b0;
+  --color-gray-2: #d4d4d4;
+
+  --color-black: #00000c;
+  --color-white: #f6f6ff;
+  --color-background: #f6f6ff;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-blue-1;
+  }
 }
 
 @utility text-display {
