@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 type ButtonVariant =
   'primary' | 'outlineLight' | 'outlineDark' | 'pink' | 'green'
 
@@ -5,6 +7,7 @@ type ButtonProps = {
   children: React.ReactNode
   variant?: ButtonVariant
   rightIcon?: React.ReactNode
+  to?: string
   onClick?: () => void
   disabled?: boolean
 }
@@ -26,22 +29,39 @@ export function Button({
   children,
   variant = 'primary',
   rightIcon,
+  to,
   onClick,
   disabled,
 }: ButtonProps) {
-  return (
-    <button
-      type="button"
-      className={`${baseClasses} ${variantClasses[variant]}`}
-      onClick={onClick}
-      disabled={disabled}
-    >
+  const classes = `${baseClasses} ${variantClasses[variant]}`
+
+  const content = (
+    <>
       {children}
       {rightIcon && (
         <span aria-hidden="true" className="flex">
           {rightIcon}
         </span>
       )}
+    </>
+  )
+
+  if (to) {
+    return (
+      <Link to={to} className={classes}>
+        {content}
+      </Link>
+    )
+  }
+
+  return (
+    <button
+      type="button"
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {content}
     </button>
   )
 }
