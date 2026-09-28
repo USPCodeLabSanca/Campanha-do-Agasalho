@@ -12,7 +12,7 @@ export function App() {
       <button type="button" onClick={toggleLanguage}>
         {t('language.switch')}
       </button>
-      <h1>{t('title')}</h1>
+      <h1 className="text-display">{t('title')}</h1>
     </>
   )
 }
