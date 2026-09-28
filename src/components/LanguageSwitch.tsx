@@ -12,7 +12,7 @@ export function LanguageSwitch() {
   return (
     <button
       type="button"
-      className="flex cursor-pointer items-center gap-2 rounded-full border border-white px-3 py-1.5 text-button text-white transition-colors hover:bg-white hover:text-blue-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-2"
+      className="flex cursor-pointer items-center gap-2 rounded-full border border-white px-3 py-1.5 text-button text-white transition-colors hover:bg-white hover:text-blue-1"
       onClick={toggleLanguage}
     >
       <GlobeIcon aria-hidden="true" size={20} />

@@ -47,6 +47,10 @@
   body {
     @apply bg-background text-blue-1;
   }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-orange-2;
+  }
 }
 
 @utility text-display {

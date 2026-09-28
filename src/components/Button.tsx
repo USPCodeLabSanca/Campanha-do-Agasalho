@@ -13,7 +13,7 @@ type ButtonProps = {
 }
 
 const baseClasses =
-  'text-button cursor-pointer rounded-full border-2 px-5 py-3 transition inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-2 disabled:pointer-events-none disabled:opacity-50'
+  'text-button cursor-pointer rounded-full border-2 px-5 py-3 transition inline-flex items-center gap-2 disabled:pointer-events-none disabled:opacity-50'
 
 const variantClasses = {
   primary: 'bg-orange-1 text-blue-1 border-transparent hover:brightness-95',
