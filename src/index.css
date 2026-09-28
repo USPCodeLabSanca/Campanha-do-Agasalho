@@ -1,14 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Milky Nice";
-  src: url("./assets/fonts/MilkyNice.woff2") format("woff2");
+  font-family: 'Milky Nice';
+  src: url('./assets/fonts/MilkyNice.woff2') format('woff2');
   font-display: swap;
 }
 
 @theme {
-  --font-display: "Milky Nice", sans-serif;
-  --font-sans: "Nunito", sans-serif;
+  --font-display: 'Milky Nice', sans-serif;
+  --font-sans: 'Nunito', sans-serif;
 
   --color-blue-1: #003d5c;
   --color-blue-2: #233e5d;
