@@ -6,7 +6,9 @@
   "header": {
     "logoAlt": "USP Winter Clothing Drive",
     "navLabel": "Main",
-    "donate": "Donate"
+    "donate": "Donate",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "nav": {
     "home": "Home",

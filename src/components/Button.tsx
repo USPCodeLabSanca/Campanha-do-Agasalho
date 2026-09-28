@@ -13,7 +13,7 @@ type ButtonProps = {
 }
 
 const baseClasses =
-  'text-button cursor-pointer rounded-full border-2 px-5 py-3 transition inline-flex items-center gap-2 disabled:pointer-events-none disabled:opacity-50'
+  'text-button cursor-pointer rounded-full border-2 px-5 py-3 transition inline-flex items-center justify-center gap-2 disabled:pointer-events-none disabled:opacity-50'
 
 const variantClasses = {
   primary: 'bg-orange-1 text-blue-1 border-transparent hover:brightness-95',
@@ -48,7 +48,7 @@ export function Button({
 
   if (to) {
     return (
-      <Link to={to} className={classes}>
+      <Link to={to} className={classes} onClick={onClick}>
         {content}
       </Link>
     )

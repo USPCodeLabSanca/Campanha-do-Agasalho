@@ -6,7 +6,9 @@
   "header": {
     "logoAlt": "Campanha USP do Agasalho",
     "navLabel": "Principal",
-    "donate": "Quero doar"
+    "donate": "Quero doar",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "nav": {
     "home": "Início",
