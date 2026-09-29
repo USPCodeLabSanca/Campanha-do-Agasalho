@@ -2,5 +2,22 @@
   "title": "Winter Clothing Drive",
   "language": {
     "switch": "Português"
+  },
+  "header": {
+    "logoAlt": "USP Winter Clothing Drive",
+    "navLabel": "Main",
+    "donate": "Donate",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "home": "Home",
+    "campaign": "The campaign",
+    "howToHelp": "How to help",
+    "collectionPoints": "Collection points",
+    "entities": "Organizations",
+    "impact": "Impact",
+    "shop": "Shop",
+    "participate": "Get involved"
   }
 }

@@ -39,13 +39,17 @@
   --color-gray-2: #d4d4d4;
 
   --color-black: #00000c;
-  --color-white: #f6f6ff;
+  --color-white: #fff;
   --color-background: #f6f6ff;
 }
 
 @layer base {
   body {
     @apply bg-background text-blue-1;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-orange-2;
   }
 }
 
@@ -102,4 +106,19 @@
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 400;
+}
+
+@utility page-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @variant sm {
+    padding-inline: 1.5rem;
+  }
+
+  @variant lg {
+    padding-inline: 2rem;
+  }
 }

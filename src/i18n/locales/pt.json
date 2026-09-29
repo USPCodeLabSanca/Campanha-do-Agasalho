@@ -2,5 +2,22 @@
   "title": "Campanha do Agasalho",
   "language": {
     "switch": "English"
+  },
+  "header": {
+    "logoAlt": "Campanha USP do Agasalho",
+    "navLabel": "Principal",
+    "donate": "Quero doar",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "nav": {
+    "home": "Início",
+    "campaign": "A campanha",
+    "howToHelp": "Como ajudar",
+    "collectionPoints": "Pontos de coleta",
+    "entities": "Entidades",
+    "impact": "Impacto",
+    "shop": "Lojinha",
+    "participate": "Participe"
   }
 }
