@@ -1,5 +1,3 @@
-import { userCollection } from "../db";
+import { userCollection } from '../db'
 
-export const UserRepository = {
-
-}
+export const UserRepository = {}

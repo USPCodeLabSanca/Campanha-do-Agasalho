@@ -1,5 +1,3 @@
-import { UserService } from "../services/user.service"
+import { UserService } from '../services/user.service'
 
-export const UserController = {
-    
-}
+export const UserController = {}

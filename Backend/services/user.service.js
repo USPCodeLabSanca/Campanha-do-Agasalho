@@ -1,5 +1,3 @@
-import { UserRepository } from "../repository/user.repository";
+import { UserRepository } from '../repository/user.repository'
 
-export const UserService = {
-    
-}
+export const UserService = {}
