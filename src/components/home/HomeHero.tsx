@@ -57,7 +57,7 @@ export function HomeHero() {
 
   return (
     <section
-      className="relative overflow-hidden bg-linear-to-b from-blue-1 to-blue-5 py-16 text-white"
+      className="relative overflow-hidden bg-linear-to-b from-blue-1 to-blue-5 section-spacing text-white"
       aria-labelledby="hero-title"
     >
       {flakes.map((flake, index) => (

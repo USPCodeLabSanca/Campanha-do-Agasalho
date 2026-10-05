@@ -122,3 +122,11 @@
     padding-inline: 2rem;
   }
 }
+
+@utility section-spacing {
+  padding-block: 3rem;
+
+  @variant lg {
+    padding-block: 4rem;
+  }
+}
