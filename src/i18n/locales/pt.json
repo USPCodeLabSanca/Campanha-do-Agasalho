@@ -50,6 +50,22 @@
           "subtitle": "desde 2010"
         }
       }
+    },
+    "getStarted": {
+      "title": "Por onde você quer começar?",
+      "subtitle": "Dá para doar em cinco minutos ou mergulhar de vez na campanha",
+      "help": {
+        "title": "Quero ajudar",
+        "description": "Encontre um ponto de coleta, veja o que doar ou descubra outras formas de contribuir.",
+        "primaryAction": "Ver pontos de coleta",
+        "secondaryAction": "Outras formas"
+      },
+      "campaign": {
+        "title": "Quero conhecer a campanha",
+        "description": "Entenda como funciona a doação e conheça o impacto da campanha em São Carlos.",
+        "primaryAction": "Como funciona",
+        "secondaryAction": "Ver impacto"
+      }
     }
   }
 }

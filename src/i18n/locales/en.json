@@ -50,6 +50,22 @@
           "subtitle": "since 2010"
         }
       }
+    },
+    "getStarted": {
+      "title": "Where would you like to start?",
+      "subtitle": "You can donate in five minutes or dive right into the drive",
+      "help": {
+        "title": "I want to help",
+        "description": "Find a collection point, see what to donate or discover other ways to contribute.",
+        "primaryAction": "See collection points",
+        "secondaryAction": "Other ways"
+      },
+      "campaign": {
+        "title": "Get to know the drive",
+        "description": "Learn how donating works and see the drive's impact in São Carlos.",
+        "primaryAction": "How it works",
+        "secondaryAction": "See impact"
+      }
     }
   }
 }
