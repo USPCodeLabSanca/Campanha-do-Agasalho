@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 
 type ButtonVariant =
-  'primary' | 'dark' | 'outlineLight' | 'outlineDark'  | 'pink' | 'green'
+  'primary' | 'dark' | 'outlineLight' | 'outlineDark' | 'pink' | 'green'
 
 type ButtonProps = {
   children: React.ReactNode
