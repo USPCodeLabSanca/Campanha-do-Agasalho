@@ -66,6 +66,29 @@
         "primaryAction": "How it works",
         "secondaryAction": "See impact"
       }
+    },
+    "howItWorks": {
+      "title": "From your donation to those in need",
+      "subtitle": "Every piece of clothing follows the same path.",
+      "button": "See the full cycle",
+      "steps": {
+        "donate": {
+          "title": "You donate",
+          "description": "Drop off the item at any collection box in the city."
+        },
+        "collect": {
+          "title": "We collect",
+          "description": "The Infrastructure team visits every collection point."
+        },
+        "sorting": {
+          "title": "Sorting",
+          "description": "Volunteers sort items by type, size and condition."
+        },
+        "delivery": {
+          "title": "Organizations",
+          "description": "The items reach those who support families."
+        }
+      }
     }
   }
 }
