@@ -1,4 +1,3 @@
-import "dotenv/config"
 import { MongoClient, Collection, Db, ObjectId } from "mongodb"
 import type { IUser } from "./interfaces/IUser.ts"
 

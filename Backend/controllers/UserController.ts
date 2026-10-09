@@ -1,5 +1,6 @@
 import { UserService } from "../services/UserService.js"
 import type { Request, Response } from "express"
+import { ErrorCode } from "../constants/ErrorCode.js";
 
 // Classe da controller da coleção User
 export class UserController {
@@ -13,17 +14,23 @@ export class UserController {
             const username = body.username;
             const password = body.password;
 
-            console.log(body);
-
             const user = await this.userService.login(username, password);
             
-            if(!user) {
-                return res.status(400).json({ mensagem: "Erro" });
-            }
+            res.cookie("token", user.token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === "prod",
+                sameSite: process.env.NODE_ENV === "prod" ? "strict" : "lax",
+                maxAge: 24 * 60 * 60 * 1000
+            })
 
-            return res.status(200).json({ mensagem: "Deu bom" });
-        } catch(err) {
-            return res.status(400).json({ mensagem: "Deu ruim" });
+            return res.status(200).json({ message: "Successful login", data: { username } });
+        } catch(err: any) {
+            console.error("[USER CONTROLLER]: ", err.cause.message);
+            return res.status(err.cause.status).json({
+                code: err.cause.code,
+                message: err.message,
+                status: err.cause.status
+            });
         }
     }
 }
