@@ -19,5 +19,37 @@
     "impact": "Impact",
     "shop": "Shop",
     "participate": "Get involved"
+  },
+  "home": {
+    "hero": {
+      "title": "The more people,",
+      "titleHighlight": "the warmer it gets.",
+      "description": "Students, staff and the city of São Carlos coming together to collect coats, blankets and shoes — and deliver everything to organizations that support those who feel the cold the most.",
+      "donate": "Donate",
+      "participate": "Get involved",
+      "imageAlt": "Smiling penguin holding a sign that says Welcome!",
+      "stats": {
+        "collectionPoints": {
+          "value": "18",
+          "title": "collection points",
+          "subtitle": "USP and São Carlos"
+        },
+        "donatedItems": {
+          "value": "+620k",
+          "title": "items collected",
+          "subtitle": "2025 edition"
+        },
+        "entities": {
+          "value": "+60",
+          "title": "organizations supported",
+          "subtitle": "São Carlos"
+        },
+        "years": {
+          "value": "+16",
+          "title": "years of the drive",
+          "subtitle": "since 2010"
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,9 @@
+import { HomeHero } from '../components/home/HomeHero'
+
 export function Home() {
-  return <h1 className="text-display">Home</h1>
+  return (
+    <>
+      <HomeHero />
+    </>
+  )
 }
