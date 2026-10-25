@@ -58,26 +58,31 @@
 @utility text-display {
   font-family: var(--font-display);
   font-size: 3.5rem;
+  line-height: 1.1;
 }
 
 @utility text-h1 {
   font-family: var(--font-display);
   font-size: 3rem;
+  line-height: 1.15;
 }
 
 @utility text-h2 {
   font-family: var(--font-display);
   font-size: 2.25rem;
+  line-height: 1.15;
 }
 
 @utility text-h3 {
   font-family: var(--font-display);
   font-size: 1.75rem;
+  line-height: 1.2;
 }
 
 @utility text-h4 {
   font-family: var(--font-display);
   font-size: 1.375rem;
+  line-height: 1.25;
 }
 
 @utility text-body-lg {
