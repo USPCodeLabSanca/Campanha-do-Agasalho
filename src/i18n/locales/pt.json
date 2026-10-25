@@ -66,6 +66,29 @@
         "primaryAction": "Como funciona",
         "secondaryAction": "Ver impacto"
       }
+    },
+    "howItWorks": {
+      "title": "Da sua doação até quem precisa",
+      "subtitle": "Todo agasalho passa pelo mesmo caminho.",
+      "button": "Ver ciclo completo",
+      "steps": {
+        "donate": {
+          "title": "Você doa",
+          "description": "Deixa a peça em qualquer caixa de coleta da cidade."
+        },
+        "collect": {
+          "title": "A gente recolhe",
+          "description": "O núcleo de Infraestrutura passa em todos os pontos."
+        },
+        "sorting": {
+          "title": "Triagem",
+          "description": "Voluntários separam por tipo, tamanho e estado."
+        },
+        "delivery": {
+          "title": "Entidades",
+          "description": "As peças chegam a quem atende as famílias."
+        }
+      }
     }
   }
 }
