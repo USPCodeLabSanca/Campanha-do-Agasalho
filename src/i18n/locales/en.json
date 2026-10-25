@@ -22,12 +22,13 @@
   },
   "footer": {
     "usefulLinks": "Useful links",
-    "navLabel": "Rodapé",
+    "navLabel": "Footer",
     "contact": "Contact",
-    "developedBy": "Developed by",
+    "madeWith": "Made with 🤍 by",
     "navInstagram": "Campaign's Instagram",
-    "navTiktok": "Campaign's Tiktok",
-    "navFacebook": "Campaign's Facebook"
+    "navTiktok": "Campaign's TikTok",
+    "navFacebook": "Campaign's Facebook",
+    "navLinkedin": "Campaign's LinkedIn"
   },
   "home": {
     "hero": {
