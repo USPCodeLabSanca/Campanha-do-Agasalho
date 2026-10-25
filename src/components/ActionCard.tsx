@@ -37,7 +37,7 @@ export function ActionCard({
       <img
         src={image}
         alt=""
-        className="w-24 shrink-0 self-center sm:w-28 sm:self-auto"
+        className="h-28 w-auto shrink-0 self-center sm:h-36 sm:self-auto"
       />
     </div>
   )
