@@ -99,6 +99,12 @@
           "description": "As peças chegam a quem atende as famílias."
         }
       }
+    },
+    "join": {
+      "title": "É da USP? Entre para a campanha!",
+      "description": "Cinco núcleos, uma edição por ano e muita gente nova sendo bem recebida.",
+      "imageAlt": "Pinguim usando um gorro azul e uma blusa azul escrito USP segurando uma pilha de roupas dobradas",
+      "button": "Faça parte"
     }
   }
 }
