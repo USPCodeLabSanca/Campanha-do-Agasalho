@@ -99,6 +99,12 @@
           "description": "The items reach those who support families."
         }
       }
+    },
+    "join": {
+      "title": "Part of USP? Join the drive!",
+      "description": "Five teams, one edition a year and lots of new people being welcomed.",
+      "imageAlt": "Penguin wearing a blue beanie and a blue USP sweater, holding a stack of folded clothes",
+      "button": "Join us"
     }
   }
 }
