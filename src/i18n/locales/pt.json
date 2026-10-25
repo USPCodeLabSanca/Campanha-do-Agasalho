@@ -23,11 +23,12 @@
   "footer": {
     "usefulLinks": "Links úteis",
     "contact": "Contato",
-    "navLabel": "Footer",
-    "developedBy": "Desenvolvido por",
+    "navLabel": "Rodapé",
+    "madeWith": "Feito com 🤍 por",
     "navInstagram": "Instagram da campanha",
-    "navTiktok": "Tiktok da campanha",
-    "navFacebook": "Facebook da campanha"
+    "navTiktok": "TikTok da campanha",
+    "navFacebook": "Facebook da campanha",
+    "navLinkedin": "LinkedIn da campanha"
   },
   "home": {
     "hero": {
