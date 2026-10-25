@@ -20,6 +20,15 @@
     "shop": "Lojinha",
     "participate": "Participe"
   },
+  "footer": {
+    "usefulLinks": "Links úteis",
+    "contact": "Contato",
+    "navLabel": "Footer",
+    "developedBy": "Desenvolvido por",
+    "navInstagram": "Instagram da campanha",
+    "navTiktok": "Tiktok da campanha",
+    "navFacebook": "Facebook da campanha"
+  },
   "home": {
     "hero": {
       "title": "Quanto mais gente,",

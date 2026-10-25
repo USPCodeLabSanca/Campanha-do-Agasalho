@@ -20,6 +20,15 @@
     "shop": "Shop",
     "participate": "Get involved"
   },
+  "footer": {
+    "usefulLinks": "Useful links",
+    "navLabel": "Rodapé",
+    "contact": "Contact",
+    "developedBy": "Developed by",
+    "navInstagram": "Campaign's Instagram",
+    "navTiktok": "Campaign's Tiktok",
+    "navFacebook": "Campaign's Facebook"
+  },
   "home": {
     "hero": {
       "title": "The more people,",
