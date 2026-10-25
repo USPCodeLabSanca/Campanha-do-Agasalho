@@ -63,7 +63,7 @@
     },
     "getStarted": {
       "title": "Where would you like to start?",
-      "subtitle": "You can donate in five minutes or dive right into the drive",
+      "subtitle": "You can donate in five minutes or dive right into the drive.",
       "help": {
         "title": "I want to help",
         "description": "Find a collection point, see what to donate or discover other ways to contribute.",
@@ -101,10 +101,19 @@
       }
     },
     "join": {
-      "title": "Part of USP? Join the drive!",
-      "description": "Five teams, one edition a year and lots of new people being welcomed.",
-      "imageAlt": "Penguin wearing a blue beanie and a blue USP sweater, holding a stack of folded clothes",
-      "button": "Join us"
+      "title": "Part of USP?",
+      "titleHighlight": "Join the drive!",
+      "description": "Pick a team, meet people from every major and help keep São Carlos warm.",
+      "photoAlt": "Group photo of about two hundred drive volunteers in blue t-shirts in front of a USP Winter Clothing Drive banner",
+      "volunteers": "+200 volunteers",
+      "teams": {
+        "general": "General",
+        "communications": "Communications",
+        "entities": "Organizations",
+        "externalRelations": "External Relations",
+        "infrastructure": "Infrastructure"
+      },
+      "button": "Get involved"
     }
   }
 }

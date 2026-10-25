@@ -73,7 +73,7 @@ export function HomeHero() {
       <div className="relative page-container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <h1
-            className="text-center text-h1 lg:self-end lg:text-left lg:text-display"
+            className="text-center text-h2 sm:text-h1 lg:self-end lg:text-left lg:text-display"
             id="hero-title"
           >
             {t('home.hero.title')}{' '}
@@ -101,7 +101,7 @@ export function HomeHero() {
         </div>
 
         <ul
-          className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-16 grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-4"
           role="list"
         >
           {infoCards.map((card) => (

@@ -4,10 +4,12 @@ import { Footer } from './components/Footer'
 
 export function App() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <AppRoutes />
+      <main className="flex-1">
+        <AppRoutes />
+      </main>
       <Footer />
-    </>
+    </div>
   )
 }

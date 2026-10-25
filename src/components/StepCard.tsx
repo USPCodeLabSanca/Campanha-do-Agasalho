@@ -9,7 +9,7 @@ type StepCardProps = {
 
 const variantClasses = {
   orange: {
-    box: 'border-orange-2',
+    box: 'border-orange-2/40',
     circle: 'bg-orange-1',
   },
   purple: {

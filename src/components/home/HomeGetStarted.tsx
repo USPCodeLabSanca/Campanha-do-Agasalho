@@ -40,12 +40,10 @@ export function HomeGetStarted() {
   return (
     <section aria-labelledby="get-started-title" className="section-spacing">
       <div className="page-container">
-        <h2 id="get-started-title" className="text-center text-h2">
+        <h2 id="get-started-title" className="text-h2">
           {t('home.getStarted.title')}
         </h2>
-        <p className="mt-2 text-center text-body">
-          {t('home.getStarted.subtitle')}
-        </p>
+        <p className="mt-2 text-body">{t('home.getStarted.subtitle')}</p>
         <ul role="list" className="mt-10 grid gap-8 lg:grid-cols-2">
           {actionCards.map((card) => (
             <li key={card.titleKey}>

@@ -63,7 +63,7 @@
     },
     "getStarted": {
       "title": "Por onde você quer começar?",
-      "subtitle": "Dá para doar em cinco minutos ou mergulhar de vez na campanha",
+      "subtitle": "Dá para doar em cinco minutos ou mergulhar de vez na campanha.",
       "help": {
         "title": "Quero ajudar",
         "description": "Encontre um ponto de coleta, veja o que doar ou descubra outras formas de contribuir.",
@@ -101,10 +101,19 @@
       }
     },
     "join": {
-      "title": "É da USP? Entre para a campanha!",
-      "description": "Cinco núcleos, uma edição por ano e muita gente nova sendo bem recebida.",
-      "imageAlt": "Pinguim usando um gorro azul e uma blusa azul escrito USP segurando uma pilha de roupas dobradas",
-      "button": "Faça parte"
+      "title": "É da USP?",
+      "titleHighlight": "Entre para a campanha!",
+      "description": "Escolha um núcleo, conheça gente de todos os cursos e ajude a aquecer São Carlos.",
+      "photoAlt": "Foto de grupo com cerca de duzentos voluntários da campanha, de camiseta azul, em frente a uma faixa da Campanha USP do Agasalho",
+      "volunteers": "+200 voluntários",
+      "teams": {
+        "general": "Geral",
+        "communications": "Divulgação",
+        "entities": "Entidades",
+        "externalRelations": "Relações Externas",
+        "infrastructure": "Infraestrutura"
+      },
+      "button": "Quero participar"
     }
   }
 }
