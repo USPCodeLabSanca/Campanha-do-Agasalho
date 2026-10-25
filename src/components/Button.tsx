@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 
 type ButtonVariant =
-  'primary' | 'outlineLight' | 'outlineDark' | 'pink' | 'green'
+  'primary' | 'dark' | 'outlineLight' | 'outlineDark'  | 'pink' | 'green'
 
 type ButtonProps = {
   children: React.ReactNode
@@ -17,6 +17,7 @@ const baseClasses =
 
 const variantClasses = {
   primary: 'bg-orange-1 text-blue-1 border-transparent hover:brightness-95',
+  dark: 'bg-blue-1 text-white border-transparent hover:brightness-130',
   outlineLight:
     'bg-transparent text-white border-white hover:bg-white hover:text-blue-1',
   outlineDark:
