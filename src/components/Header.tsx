@@ -8,18 +8,9 @@ import { Button } from './Button'
 import { NavItem } from './NavItem'
 import { LanguageSwitch } from './LanguageSwitch'
 
-import logo from '../assets/images/logo.svg'
+import { pages } from '../constants/pages'
 
-const pages = [
-  { labelKey: 'nav.home', path: '/' },
-  { labelKey: 'nav.campaign', path: '/campanha' },
-  { labelKey: 'nav.howToHelp', path: '/como-ajudar' },
-  { labelKey: 'nav.collectionPoints', path: '/pontos-coleta' },
-  { labelKey: 'nav.entities', path: '/entidades' },
-  { labelKey: 'nav.impact', path: '/impacto' },
-  { labelKey: 'nav.shop', path: '/lojinha' },
-  { labelKey: 'nav.participate', path: '/participe' },
-] as const
+import logo from '../assets/images/logo.svg'
 
 export function Header() {
   const { t } = useTranslation()
