@@ -1,6 +1,5 @@
 import { UserService } from "../services/UserService.js"
 import type { Request, Response } from "express"
-import { ErrorCode } from "../constants/ErrorCode.js";
 
 // Classe da controller da coleção User
 export class UserController {
@@ -25,12 +24,29 @@ export class UserController {
 
             return res.status(200).json({ message: "Successful login", data: { username } });
         } catch(err: any) {
-            console.error("[USER CONTROLLER]: ", err.cause.message);
-            return res.status(err.cause.status).json({
-                code: err.cause.code,
+            return res.status(err.status).json({
+                code: err.code,
                 message: err.message,
-                status: err.cause.status
+                status: err.status
             });
+        }
+    }
+
+    async register(req: Request, res: Response): Promise<Response> {
+        const body = req.body;
+        const username = body.username;
+        const password = body.password;
+        
+        try {
+            await this.userService.register(username, password);
+
+            return res.status(201).json({ message: "Successful register", data: { username } });
+        } catch(err: any) {
+            return res.status(err.status).json({
+                code: err.code,
+                message: err.message,
+                status: err.status
+            })
         }
     }
 }

@@ -1,8 +1,9 @@
 import { UserRepository } from "../repository/UserRepository.js";
-import type { ILoginServiceResponse } from "../interfaces/ILoginServiceResponse.js";
+import type { IUserServiceResponse } from "../interfaces/IUserServiceResponse.js";
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
-import { ErrorCode } from "../constants/ErrorCode.js";
+import { MongoServerError } from "mongodb";
+import { AppError } from "../errors/AppError.js";
 
 // Classe do service da coleção User
 export class UserService {
@@ -10,23 +11,17 @@ export class UserService {
     constructor(private userRepository: UserRepository) {}
     
     // Métodos do service da coleção User
-    async login(username: string, password: string): Promise<ILoginServiceResponse> {
+    async login(username: string, password: string): Promise<IUserServiceResponse> {
         const user = await this.userRepository.selectUser(username);
-        
-        const error = {  
-            code: ErrorCode.INVALID_CREDENTIALS,
-            message: "Invalid username or password",
-            status: 401
-        }
 
         if(!user) {
-            throw new Error("Invalid credentials", { cause: error });
+            throw new AppError("INVALID_CREDENTIALS");
         }
-
+        
         const compare = await bcrypt.compare(password, user.password);
-
+        
         if(!compare) {
-            throw new Error("Invalid credentials", { cause: error });
+            throw new AppError("INVALID_CREDENTIALS");
         }
 
         const token = jwt.sign({ username: username }, process.env.JWT_SECRET!);
@@ -35,5 +30,23 @@ export class UserService {
             token: token,
             username: username
         };
+    }
+
+    async register(username: string, password: string): Promise<void> {
+        const passwordHash = await bcrypt.hash(password, 10);
+        
+        try {
+            await this.userRepository.insertUser(username, passwordHash);
+        } catch(error) {
+            if(error instanceof MongoServerError) {
+                console.error(error.errmsg);
+
+                if(error.code == 11000) {
+                    throw new AppError("RESOURCE_ALREADY_EXISTS");
+                }
+            }
+
+            throw new AppError("INTERNAL_SERVER_ERROR");
+        }
     }
 }

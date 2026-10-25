@@ -9,6 +9,7 @@ export function createUserRouter(userController: UserController): Router {
 
     // Vínculo da controller com os endpoints
     router.post("/login", (req, res) => userController.login(req, res));
+    router.post("/register", (req, res) => userController.register(req, res));
     /* ^^ Caso haja necessidade de mais endpoints, colocar aqui ^^ */
     // Ex:
     // router.post("/test", (req, res) => testController.test(req, res));
