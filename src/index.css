@@ -138,3 +138,7 @@
     padding-block: 4rem;
   }
 }
+
+@utility card {
+  @apply rounded-2xl border border-orange-2/40 bg-white;
+}
