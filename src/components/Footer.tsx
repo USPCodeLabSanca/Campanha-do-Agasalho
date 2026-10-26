@@ -11,7 +11,7 @@ import {
 import { pages } from '../constants/pages'
 
 import logo from '../assets/images/logo.svg'
-import logoCodeLab from '../assets/images/logoCodeLab.svg'
+import logoCodeLab from '../assets/images/logo_codelab.svg'
 
 const socialLinks = [
   {

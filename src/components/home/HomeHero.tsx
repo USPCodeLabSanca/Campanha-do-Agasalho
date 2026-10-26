@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { Button } from '../Button'
 import { StatCard } from '../StatCard'
 
-import welcomePt from '../../assets/images/welcome_pt.svg'
-import welcomeEn from '../../assets/images/welcome_en.svg'
+import welcomePt from '../../assets/images/floq_welcome_pt.svg'
+import welcomeEn from '../../assets/images/floq_welcome_en.svg'
 import snowFlake from '../../assets/images/snowflake.svg'
 import snowBall from '../../assets/images/snowball.svg'
 
