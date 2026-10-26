@@ -2,14 +2,14 @@ import { useTranslation } from 'react-i18next'
 
 import { ActionCard } from '../ActionCard'
 
-import love from '../../assets/images/love_floq.svg'
-import doubt from '../../assets/images/doubt_floq.svg'
+import floqHeartHands from '../../assets/images/floq_heart_hands.svg'
+import floqThinking from '../../assets/images/floq_thinking.svg'
 
 const actionCards = [
   {
     titleKey: 'home.getStarted.help.title',
     descriptionKey: 'home.getStarted.help.description',
-    image: love,
+    image: floqHeartHands,
     primaryAction: {
       labelKey: 'home.getStarted.help.primaryAction',
       to: '/pontos-coleta',
@@ -22,7 +22,7 @@ const actionCards = [
   {
     titleKey: 'home.getStarted.campaign.title',
     descriptionKey: 'home.getStarted.campaign.description',
-    image: doubt,
+    image: floqThinking,
     primaryAction: {
       labelKey: 'home.getStarted.campaign.primaryAction',
       to: '/campanha',

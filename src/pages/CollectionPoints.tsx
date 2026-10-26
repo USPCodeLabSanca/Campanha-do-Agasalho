@@ -1,3 +1,19 @@
+import { useTranslation } from 'react-i18next'
+
+import { PageHero } from '../components/PageHero'
+
+import floqCollectionBox from '../assets/images/floq_collection_box.svg'
+
 export function CollectionPoints() {
-  return <h1 className="text-display">Pontos de Coleta</h1>
+  const { t } = useTranslation()
+
+  return (
+    <PageHero
+      label={t('nav.collectionPoints')}
+      title={t('collectionPoints.hero.title')}
+      description={t('collectionPoints.hero.description')}
+      image={floqCollectionBox}
+      variant="pink"
+    />
+  )
 }

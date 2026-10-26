@@ -115,5 +115,47 @@
       },
       "button": "Get involved"
     }
+  },
+  "campaign": {
+    "hero": {
+      "title": "USP Winter Clothing Drive",
+      "description": "The initiative collects winter clothes, blankets and shoes and delivers them to social organizations in São Carlos, entirely run by volunteers."
+    }
+  },
+  "howToHelp": {
+    "hero": {
+      "title": "Every bit of help warms",
+      "description": "Donating clothes is just the start. The shop, raffles, partnerships and volunteering also keep the drive going."
+    }
+  },
+  "collectionPoints": {
+    "hero": {
+      "title": "There's a box near you",
+      "description": "Boxes spread across USP and the city. Search by name or filter by neighborhood."
+    }
+  },
+  "entities": {
+    "hero": {
+      "title": "Your donation has an address",
+      "description": "Organizations in São Carlos that receive the items and know firsthand who needs them."
+    }
+  },
+  "impact": {
+    "hero": {
+      "title": "Every piece counts",
+      "description": "How much was collected, where it went and how many people we reached in each edition."
+    }
+  },
+  "shop": {
+    "hero": {
+      "title": "Wear our cause",
+      "description": "Clothing and items from the Winter Clothing Drive for everyone who takes part in, supports and helps build this initiative."
+    }
+  },
+  "participate": {
+    "hero": {
+      "title": "Join the drive!",
+      "description": "Five teams take care of everything, from the collection box to the Instagram post. Find out where you fit in."
+    }
   }
 }

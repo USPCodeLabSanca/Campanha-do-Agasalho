@@ -115,5 +115,47 @@
       },
       "button": "Quero participar"
     }
+  },
+  "campaign": {
+    "hero": {
+      "title": "Campanha USP do Agasalho",
+      "description": "A iniciativa arrecada roupas de inverno, cobertores e calçados para destiná-los a entidades sociais de São Carlos, com trabalho totalmente voluntário."
+    }
+  },
+  "howToHelp": {
+    "hero": {
+      "title": "Toda ajuda aquece",
+      "description": "Doar roupa é o começo. Lojinha, rifas, parcerias e voluntariado também mantêm a campanha de pé."
+    }
+  },
+  "collectionPoints": {
+    "hero": {
+      "title": "Tem uma caixa perto de você",
+      "description": "Caixas espalhadas pela USP e pela cidade. Busque pelo nome ou filtre por bairro."
+    }
+  },
+  "entities": {
+    "hero": {
+      "title": "Sua doação tem endereço",
+      "description": "Instituições de São Carlos que recebem as peças e conhecem de perto quem precisa delas."
+    }
+  },
+  "impact": {
+    "hero": {
+      "title": "Cada peça conta",
+      "description": "Quanto foi arrecadado, para onde foi e quantas pessoas alcançamos em cada edição."
+    }
+  },
+  "shop": {
+    "hero": {
+      "title": "Vista a nossa causa",
+      "description": "Roupas e peças da Campanha do Agasalho para quem participa, apoia e ajuda a construir essa iniciativa."
+    }
+  },
+  "participate": {
+    "hero": {
+      "title": "Faça parte da campanha!",
+      "description": "Cinco núcleos cuidam de tudo: da caixa de coleta ao post no Instagram. Descubra onde o seu jeito se encaixa."
+    }
   }
 }
