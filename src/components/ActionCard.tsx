@@ -21,7 +21,7 @@ export function ActionCard({
   secondaryAction,
 }: ActionCardProps) {
   return (
-    <div className="flex h-full flex-col-reverse items-start gap-6 rounded-2xl border border-orange-2 bg-white p-6 text-blue-1 sm:flex-row sm:items-center sm:p-8">
+    <div className="flex h-full flex-col-reverse items-start gap-6 card p-6 text-blue-1 sm:flex-row sm:items-center sm:p-8">
       <div>
         <h3 className="text-h3">{title}</h3>
         <p className="mt-2 text-body">{description}</p>

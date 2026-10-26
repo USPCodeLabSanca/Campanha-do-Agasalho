@@ -13,7 +13,7 @@ const variantClasses = {
     circle: 'bg-orange-1',
   },
   purple: {
-    box: 'border-purple-1',
+    box: 'border-purple-1/40',
     circle: 'bg-purple-3',
   },
 }
@@ -26,7 +26,7 @@ export function StepCard({
 }: StepCardProps) {
   return (
     <div
-      className={`h-full rounded-2xl border bg-background p-8 text-blue-1 ${variantClasses[variant].box}`}
+      className={`h-full card p-8 text-blue-1 ${variantClasses[variant].box}`}
     >
       <span
         className={`flex size-12 items-center justify-center rounded-full text-h4 ${variantClasses[variant].circle}`}

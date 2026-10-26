@@ -120,6 +120,21 @@
     "hero": {
       "title": "Campanha USP do Agasalho",
       "description": "A iniciativa arrecada roupas de inverno, cobertores e calçados para destiná-los a entidades sociais de São Carlos, com trabalho totalmente voluntário."
+    },
+    "values": {
+      "title": "O que move a campanha",
+      "impact": {
+        "title": "Impacto real",
+        "description": "Transformar doações em impacto real, levando roupas e carinho."
+      },
+      "dignity": {
+        "title": "Dignidade",
+        "description": "Estar presente onde precisam da gente, promovendo dignidade e inclusão social."
+      },
+      "mobilization": {
+        "title": "Mobilização",
+        "description": "Mostrar que a mudança começa aqui, mobilizando pessoas contra a desigualdade social."
+      }
     }
   },
   "howToHelp": {
