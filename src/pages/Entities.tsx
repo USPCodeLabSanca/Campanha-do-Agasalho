@@ -1,3 +1,19 @@
+import { useTranslation } from 'react-i18next'
+
+import { PageHero } from '../components/PageHero'
+
+import floqMother from '../assets/images/floq_mother.svg'
+
 export function Entities() {
-  return <h1 className="text-display">Entidades</h1>
+  const { t } = useTranslation()
+
+  return (
+    <PageHero
+      label={t('nav.entities')}
+      title={t('entities.hero.title')}
+      description={t('entities.hero.description')}
+      image={floqMother}
+      variant="purple"
+    />
+  )
 }
