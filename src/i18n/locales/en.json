@@ -120,6 +120,21 @@
     "hero": {
       "title": "USP Winter Clothing Drive",
       "description": "The initiative collects winter clothes, blankets and shoes and delivers them to social organizations in São Carlos, entirely run by volunteers."
+    },
+    "values": {
+      "title": "What drives us",
+      "impact": {
+        "title": "Real impact",
+        "description": "Turning donations into real impact, delivering clothes and care."
+      },
+      "dignity": {
+        "title": "Dignity",
+        "description": "Being there for those who need us, promoting dignity and social inclusion."
+      },
+      "mobilization": {
+        "title": "Mobilization",
+        "description": "Showing that change starts here, bringing people together against social inequality."
+      }
     }
   },
   "howToHelp": {
