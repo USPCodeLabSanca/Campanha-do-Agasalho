@@ -2,7 +2,7 @@ import { ObjectId } from "mongodb"
 
 // Interface dos elementos da coleção Year
 export interface IYear {
-  _id: ObjectId;
+  _id?: ObjectId;
   year: number;
   totalCollected: number;
   totalCollectionPoints: number;
