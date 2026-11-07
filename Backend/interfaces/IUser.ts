@@ -2,7 +2,7 @@ import { ObjectId } from "mongodb"
 
 // Interface dos elementos da coleção User
 export interface IUser {
-    _id?: string;
+    _id?: ObjectId;
     username: string;
     password: string;
 }

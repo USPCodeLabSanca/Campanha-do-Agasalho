@@ -12,6 +12,6 @@ export class UserRepository {
     }
 
     async insertUser(username: string, password: string): Promise<InsertOneResult<IUser>> {
-        return await this.userCollection.insertOne({ _id: username, username: username, password: password });
+        return await this.userCollection.insertOne({ username: username, password: password });
     }
 }

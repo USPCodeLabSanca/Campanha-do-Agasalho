@@ -34,16 +34,18 @@ export class UserService {
 
     async register(username: string, password: string): Promise<void> {
         const passwordHash = await bcrypt.hash(password, 10);
-        
+
         try {
+            const user = await this.userRepository.selectUser(username);
+
+            if(user) {
+                throw new AppError("RESOURCE_ALREADY_EXISTS");
+            }
+
             await this.userRepository.insertUser(username, passwordHash);
         } catch(error) {
-            if(error instanceof MongoServerError) {
-                console.error(error.errmsg);
-
-                if(error.code == 11000) {
-                    throw new AppError("RESOURCE_ALREADY_EXISTS");
-                }
+            if (error instanceof AppError) {
+                throw error;
             }
 
             throw new AppError("INTERNAL_SERVER_ERROR");
