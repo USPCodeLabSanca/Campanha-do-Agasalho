@@ -13,17 +13,40 @@ export class UserController {
             const username = body.username;
             const password = body.password;
 
-            console.log(body);
-
             const user = await this.userService.login(username, password);
             
-            if(!user) {
-                return res.status(400).json({ mensagem: "Erro" });
-            }
+            res.cookie("token", user.token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === "prod",
+                sameSite: process.env.NODE_ENV === "prod" ? "strict" : "lax",
+                maxAge: 24 * 60 * 60 * 1000
+            })
 
-            return res.status(200).json({ mensagem: "Deu bom" });
-        } catch(err) {
-            return res.status(400).json({ mensagem: "Deu ruim" });
+            return res.status(200).json({ message: "Successful login", data: { username } });
+        } catch(err: any) {
+            return res.status(err.status).json({
+                code: err.code,
+                message: err.message,
+                status: err.status
+            });
+        }
+    }
+
+    async register(req: Request, res: Response): Promise<Response> {
+        const body = req.body;
+        const username = body.username;
+        const password = body.password;
+        
+        try {
+            await this.userService.register(username, password);
+
+            return res.status(201).json({ message: "Successful register", data: { username } });
+        } catch(err: any) {
+            return res.status(err.status).json({
+                code: err.code,
+                message: err.message,
+                status: err.status
+            })
         }
     }
 }
