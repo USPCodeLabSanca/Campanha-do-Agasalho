@@ -165,6 +165,40 @@
           "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
         }
       }
+    },
+    "howItWorks": {
+      "title": "Como funciona",
+      "subtitle": "O caminho completo de uma peça doada.",
+      "steps": {
+        "donate": {
+          "title": "Você doa",
+          "description": "Separa o que não usa e leva ao ponto mais próximo."
+        },
+        "box": {
+          "title": "Caixa de coleta",
+          "description": "Cada ponto tem uma caixa identificada da campanha."
+        },
+        "collect": {
+          "title": "Recolhimento",
+          "description": "A Infraestrutura passa nos pontos em rotas programadas."
+        },
+        "storage": {
+          "title": "Organização na USP",
+          "description": "As peças chegam ao espaço da campanha no campus."
+        },
+        "sorting": {
+          "title": "Triagem",
+          "description": "Separação por tipo, tamanho e condição de uso."
+        },
+        "entities": {
+          "title": "Entidades",
+          "description": "Lotes divididos conforme a demanda de cada entidade."
+        },
+        "delivery": {
+          "title": "Chega a quem precisa",
+          "description": "As entidades entregam às famílias que acompanham."
+        }
+      }
     }
   },
   "howToHelp": {

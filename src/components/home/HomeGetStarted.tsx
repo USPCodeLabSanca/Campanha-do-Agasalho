@@ -25,7 +25,7 @@ const actionCards = [
     image: floqThinking,
     primaryAction: {
       labelKey: 'home.getStarted.campaign.primaryAction',
-      to: '/campanha',
+      to: '/campanha#como-funciona',
     },
     secondaryAction: {
       labelKey: 'home.getStarted.campaign.secondaryAction',

@@ -38,7 +38,7 @@ export function HomeHowItWorks() {
             </h2>
             <p className="mt-2 text-body">{t('home.howItWorks.subtitle')}</p>
           </div>
-          <Button variant="dark" to="/campanha">
+          <Button variant="dark" to="/campanha#como-funciona">
             {t('home.howItWorks.button')}
           </Button>
         </div>
