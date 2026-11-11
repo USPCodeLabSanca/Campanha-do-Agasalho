@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 
 import { PageHero } from '../components/PageHero'
 import { CampaignValues } from '../components/campaign/CampaignValues'
+import { CampaignHistory } from '../components/campaign/CampaignHistory'
 
 import floqGroup from '../assets/images/floq_group.svg'
 
@@ -17,6 +18,7 @@ export function Campaign() {
         image={floqGroup}
       />
       <CampaignValues />
+      <CampaignHistory />
     </>
   )
 }
