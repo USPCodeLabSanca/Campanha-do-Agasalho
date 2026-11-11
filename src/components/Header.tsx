@@ -55,7 +55,9 @@ export function Header() {
 
         <div className="hidden items-center gap-3 xl:flex">
           <LanguageSwitch />
-          <Button to="/pontos-coleta">{t('header.donate')}</Button>
+          <Button size="small" to="/pontos-coleta">
+            {t('header.donate')}
+          </Button>
         </div>
 
         <button

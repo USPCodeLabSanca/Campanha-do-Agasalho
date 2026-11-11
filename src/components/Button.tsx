@@ -3,9 +3,12 @@ import { Link } from 'react-router'
 type ButtonVariant =
   'primary' | 'dark' | 'outlineLight' | 'outlineDark' | 'pink' | 'green'
 
+type ButtonSize = 'default' | 'small'
+
 type ButtonProps = {
   children: React.ReactNode
   variant?: ButtonVariant
+  size?: ButtonSize
   rightIcon?: React.ReactNode
   to?: string
   onClick?: () => void
@@ -13,7 +16,12 @@ type ButtonProps = {
 }
 
 const baseClasses =
-  'text-button cursor-pointer rounded-full border-2 px-5 py-3 transition inline-flex items-center justify-center gap-2 disabled:pointer-events-none disabled:opacity-50'
+  'text-button cursor-pointer rounded-full border-2 transition inline-flex items-center justify-center gap-2 disabled:pointer-events-none disabled:opacity-50'
+
+const sizeClasses = {
+  default: 'px-5 py-3',
+  small: 'px-4 py-1.5',
+}
 
 const variantClasses = {
   primary: 'bg-orange-1 text-blue-1 border-transparent hover:brightness-95',
@@ -29,12 +37,13 @@ const variantClasses = {
 export function Button({
   children,
   variant = 'primary',
+  size = 'default',
   rightIcon,
   to,
   onClick,
   disabled,
 }: ButtonProps) {
-  const classes = `${baseClasses} ${variantClasses[variant]}`
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]}`
 
   const content = (
     <>
