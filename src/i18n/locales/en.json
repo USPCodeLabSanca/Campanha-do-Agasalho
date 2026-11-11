@@ -165,6 +165,40 @@
           "description": "Students set up the first collection boxes around campus."
         }
       }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "The full journey of a donated item.",
+      "steps": {
+        "donate": {
+          "title": "You donate",
+          "description": "Set aside what you no longer use and take it to the nearest point."
+        },
+        "box": {
+          "title": "Collection box",
+          "description": "Each point has a box labeled with the drive's name."
+        },
+        "collect": {
+          "title": "Pickup",
+          "description": "The Infrastructure team visits the points on scheduled routes."
+        },
+        "storage": {
+          "title": "Storage at USP",
+          "description": "The items arrive at the drive's space on campus."
+        },
+        "sorting": {
+          "title": "Sorting",
+          "description": "Items are sorted by type, size and condition."
+        },
+        "entities": {
+          "title": "Organizations",
+          "description": "Batches are split according to each organization's needs."
+        },
+        "delivery": {
+          "title": "Reaching those in need",
+          "description": "The organizations deliver the items to the families they support."
+        }
+      }
     }
   },
   "howToHelp": {
