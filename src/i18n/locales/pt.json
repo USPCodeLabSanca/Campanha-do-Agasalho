@@ -135,6 +135,36 @@
         "title": "Mobilização",
         "description": "Mostrar que a mudança começa aqui, mobilizando pessoas contra a desigualdade social."
       }
+    },
+    "history": {
+      "title": "Nossa história",
+      "milestones": {
+        "first": {
+          "year": "2007",
+          "title": "Primeira edição",
+          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
+        },
+        "second": {
+          "year": "2007",
+          "title": "Primeira edição",
+          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
+        },
+        "third": {
+          "year": "2007",
+          "title": "Primeira edição",
+          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
+        },
+        "fourth": {
+          "year": "2007",
+          "title": "Primeira edição",
+          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
+        },
+        "fifth": {
+          "year": "2007",
+          "title": "Primeira edição",
+          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
+        }
+      }
     }
   },
   "howToHelp": {
