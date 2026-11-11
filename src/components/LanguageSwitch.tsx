@@ -1,22 +1,40 @@
-import { GlobeIcon } from '@phosphor-icons/react'
 import { useTranslation } from 'react-i18next'
+
+const languages = [
+  { code: 'pt', label: 'PT', name: 'Português' },
+  { code: 'en', label: 'EN', name: 'English' },
+] as const
 
 export function LanguageSwitch() {
   const { t, i18n } = useTranslation()
-  const nextLanguage = i18n.resolvedLanguage === 'pt' ? 'en' : 'pt'
-
-  function toggleLanguage() {
-    i18n.changeLanguage(nextLanguage)
-  }
 
   return (
-    <button
-      type="button"
-      className="flex cursor-pointer items-center justify-center gap-2 rounded-full border border-white px-3 py-1.5 text-button text-white transition-colors hover:bg-white hover:text-blue-1"
-      onClick={toggleLanguage}
+    <div
+      role="group"
+      aria-label={t('language.label')}
+      className="flex w-fit rounded-full bg-black/20 p-1 text-small font-bold"
     >
-      <GlobeIcon aria-hidden="true" size={20} />
-      <span lang={nextLanguage}>{t('language.switch')}</span>
-    </button>
+      {languages.map((language) => {
+        const isActive = i18n.resolvedLanguage === language.code
+
+        return (
+          <button
+            key={language.code}
+            type="button"
+            lang={language.code}
+            aria-pressed={isActive}
+            onClick={() => i18n.changeLanguage(language.code)}
+            className={`cursor-pointer rounded-full px-3 py-1.5 transition-colors ${
+              isActive
+                ? 'bg-orange-3 text-blue-1'
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
+            {language.label}
+            <span className="sr-only"> - {language.name}</span>
+          </button>
+        )
+      })}
+    </div>
   )
 }
