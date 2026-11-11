@@ -54,6 +54,12 @@
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-orange-2;
   }
+
+  /* O VLibras só traduz português, então some com o site em inglês */
+  html[lang='en'] #vlibras-access-wrapper,
+  html[lang='en'] #vlibras-app-root {
+    display: none !important;
+  }
 }
 
 @utility text-display {
