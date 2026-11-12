@@ -13,7 +13,6 @@ export interface ICollectPoint {
     lng: number;
   };
   operatingHours?: string;
-  acceptedItems: string[];
   isActive: boolean;
   createdAt?: Date;
   updatedAt?: Date;

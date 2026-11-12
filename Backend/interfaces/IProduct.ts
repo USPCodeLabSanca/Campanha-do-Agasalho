@@ -5,7 +5,7 @@ export interface ICampaignProduct {
   _id?: ObjectId;
   name: string;           
   description: string;      
-  price?: number;  
+  price: number;  
   images: string[];   
   purchaseInstructions: string;  
   isAvailable: boolean;  

@@ -4,14 +4,14 @@ import { ObjectId } from "mongodb";
 export interface IEntity {
   _id?: ObjectId;
   name: string;         
-  location: string;   
+  location: string;
+  neighborhood: string;
   targetAudience: string; 
   description: string;  
   campaignContribution: string; 
   photos?: string[];
   contactInfo?: {
     phone?: string;
-    address?: string;
     socialMedia?: string;
   };
   isActive: boolean; 
