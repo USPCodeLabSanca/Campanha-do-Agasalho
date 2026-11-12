@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
-import { Button } from '../Button'
 import { StepCard } from '../StepCard'
+import { TextLink } from '../TextLink'
 
 const steps = [
   {
@@ -38,9 +38,9 @@ export function HomeHowItWorks() {
             </h2>
             <p className="mt-2 text-body">{t('home.howItWorks.subtitle')}</p>
           </div>
-          <Button variant="dark" to="/campanha#como-funciona">
+          <TextLink to="/campanha#como-funciona">
             {t('home.howItWorks.button')}
-          </Button>
+          </TextLink>
         </div>
         <ol
           className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"

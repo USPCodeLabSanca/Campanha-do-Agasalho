@@ -1,4 +1,5 @@
 import { Button } from './Button'
+import { TextLink } from './TextLink'
 
 type CardAction = {
   label: string
@@ -25,13 +26,11 @@ export function ActionCard({
       <div>
         <h3 className="text-h3">{title}</h3>
         <p className="mt-2 text-body">{description}</p>
-        <div className="mt-6 flex flex-wrap gap-4">
+        <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6 lg:flex-col lg:items-start lg:gap-4 xl:flex-row xl:items-center xl:gap-6">
           <Button variant="dark" to={primaryAction.to}>
             {primaryAction.label}
           </Button>
-          <Button variant="outlineDark" to={secondaryAction.to}>
-            {secondaryAction.label}
-          </Button>
+          <TextLink to={secondaryAction.to}>{secondaryAction.label}</TextLink>
         </div>
       </div>
       <img
