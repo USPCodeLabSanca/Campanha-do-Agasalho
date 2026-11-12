@@ -7,7 +7,6 @@ export interface ICampaignProduct {
   description: string;      
   price: number;  
   images: string[];   
-  purchaseInstructions: string;  
   isAvailable: boolean;  
   createdAt?: Date;
   updatedAt?: Date;
