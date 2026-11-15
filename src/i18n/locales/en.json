@@ -217,6 +217,32 @@
     "hero": {
       "title": "Your donation has an address",
       "description": "Organizations in São Carlos that receive the items and know firsthand who needs them."
+    },
+    "path": {
+      "title": "Where does your donation go?",
+      "steps": {
+        "sorting": {
+          "title": "Sorting",
+          "description": "Volunteers screen each garment for condition, type, and size."
+        },
+        "division": {
+          "title": "Demand-based division",
+          "description": "Each organization reports its most needed items for that winter."
+        },
+        "delivery": {
+          "title": "Delivery",
+          "description": "Batches are delivered directly to the organizations by the campaign."
+        },
+        "families": {
+          "title": "Reaching families",
+          "description": "Organizations distribute them to the people they assist on a daily basis."
+        }
+      }
+    },
+    "partners": {
+      "title": "Partners entities",
+      "target": "Serves:",
+      "description": "How we help:"
     }
   },
   "impact": {
