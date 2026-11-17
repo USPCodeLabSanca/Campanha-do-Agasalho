@@ -38,6 +38,10 @@ async function initServer(): Promise<void> {
         const yearRepository = new YearRepository(yearCollection);
         const yearService = new YearService(yearRepository);
         const yearController = new YearController(yearService);
+
+        const entityRepository = new ;
+        const entityService = new ;
+        const entityController = new ;
         /* ^^ Caso haja necessidade de mais categorias, colocar aqui ^^ */
         // Ex:
         // const testRepository = db.collection<ITeste>('test')
@@ -46,6 +50,7 @@ async function initServer(): Promise<void> {
 
         app.use("/user", createUserRouter(userController));
         app.use("/year", createYearRouter(yearController));
+        app.use("/entity", createEntityRouter(entityController));
         /* ^^ Caso haja necessidade de mais rotas, colocar aqui ^^ */
         // Ex:
         // app.use("/test", createTestRouter(testController));
