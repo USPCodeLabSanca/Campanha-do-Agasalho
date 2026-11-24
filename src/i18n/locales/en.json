@@ -249,6 +249,58 @@
     "hero": {
       "title": "Every piece counts",
       "description": "How much was collected, where it went and how many people we reached in each edition."
+    },
+    "numbers": {
+      "title": "Our numbers",
+      "subtitle": "See the total for every edition or pick a year.",
+      "loading": "Loading the numbers...",
+      "error": "We couldn't load the numbers right now. Please try again later.",
+      "empty": "The numbers haven't been published yet.",
+      "selectorLabel": "Choose edition",
+      "all": "All",
+      "ongoing": "ongoing",
+      "ongoingNotice": "The {{year}} edition is still happening. These numbers are partial.",
+      "stats": {
+        "pieces": "items collected",
+        "editions": "editions",
+        "volunteers": "volunteers",
+        "record": "biggest collection",
+        "collectionPoints": "collection points",
+        "collectionPointsPlace": "USP and São Carlos",
+        "entities": "organizations supported",
+        "since": "since {{year}}",
+        "edition": "{{year}} edition",
+        "inYear": "in {{year}}",
+        "soFar": "so far",
+        "allEditions": "across all editions",
+        "teams": "across the five teams"
+      },
+      "chart": {
+        "title": "Items per edition",
+        "hintAll": "Pick a year above to highlight it in the chart.",
+        "hintYear": "The selected year is shown in orange.",
+        "legend": "Striped: ongoing edition, partial numbers",
+        "edition": "Edition",
+        "pieces": "Items collected"
+      },
+      "destinations": {
+        "title": "Where the items went",
+        "noteAll": "By type of organization, average across editions.",
+        "noteYear": "By type of organization, in {{year}}.",
+        "link": "Meet our partner organizations",
+        "types": {
+          "shelters": "Shelters and care homes",
+          "elderly": "Senior care institutions",
+          "childcare": "Daycares and schools",
+          "socialProjects": "Social projects and NGOs",
+          "families": "Families supported by CRAS"
+        }
+      }
+    },
+    "testimonial": {
+      "quote": "With the blankets that arrived in June, we got through the winter without anyone sleeping cold.",
+      "name": "Maria, coordinator",
+      "organization": "Partner shelter"
     }
   },
   "shop": {
