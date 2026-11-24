@@ -69,11 +69,23 @@ export function useBag() {
     setItems((current) => current.filter((item) => item.key !== key))
   }
 
+  function clearBag() {
+    setItems([])
+  }
+
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
   const totalPrice = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
   )
 
-  return { items, addItem, updateQuantity, removeItem, totalItems, totalPrice }
+  return {
+    items,
+    addItem,
+    updateQuantity,
+    removeItem,
+    clearBag,
+    totalItems,
+    totalPrice,
+  }
 }

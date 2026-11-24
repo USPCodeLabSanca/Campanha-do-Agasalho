@@ -40,6 +40,7 @@ export function Shop() {
           totalPrice={bag.totalPrice}
           onUpdateQuantity={bag.updateQuantity}
           onRemove={bag.removeItem}
+          onClear={bag.clearBag}
           onClose={() => setIsBagOpen(false)}
         />
       )}

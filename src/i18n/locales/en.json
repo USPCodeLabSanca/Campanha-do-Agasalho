@@ -418,6 +418,8 @@
       "send": "Send via WhatsApp",
       "newTab": "(opens in a new tab)",
       "note": "Payment and pickup are arranged in the chat.",
+      "clear": "Empty bag",
+      "sentQuestion": "Already sent your order?",
       "message": {
         "greeting": "Hi! I'd like to place an order from the Winter Clothing Drive shop:",
         "total": "Total: {{total}}"

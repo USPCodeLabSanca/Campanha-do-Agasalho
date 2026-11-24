@@ -418,6 +418,8 @@
       "send": "Enviar pelo WhatsApp",
       "newTab": "(abre em nova aba)",
       "note": "O pagamento e a retirada são combinados na conversa.",
+      "clear": "Esvaziar sacolinha",
+      "sentQuestion": "Já enviou o pedido?",
       "message": {
         "greeting": "Olá! Quero fazer um pedido na Lojinha da Campanha do Agasalho:",
         "total": "Total: {{total}}"
