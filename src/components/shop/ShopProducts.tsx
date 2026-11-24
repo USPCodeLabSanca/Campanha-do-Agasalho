@@ -6,7 +6,11 @@ import { ShopCatalog } from './ShopCatalog'
 import { getProducts } from '../../services/shop'
 import type { Product } from '../../types/product'
 
-export function ShopProducts() {
+type ShopProductsProps = {
+  onAddToBag: (product: Product, size: string | null, quantity: number) => void
+}
+
+export function ShopProducts({ onAddToBag }: ShopProductsProps) {
   const { t } = useTranslation()
   const [products, setProducts] = useState<Product[] | null>(null)
   const [hasError, setHasError] = useState(false)
@@ -45,7 +49,7 @@ export function ShopProducts() {
             {statusMessage}
           </p>
         ) : (
-          <ShopCatalog products={products} />
+          <ShopCatalog products={products} onAddToBag={onAddToBag} />
         )}
       </div>
     </section>

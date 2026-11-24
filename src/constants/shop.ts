@@ -1,0 +1,3 @@
+export const WHATSAPP_NUMBER = '5516900000000'
+
+export const MAX_QUANTITY = 10

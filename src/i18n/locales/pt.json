@@ -400,7 +400,28 @@
       "quantity": "Quantidade",
       "decrease": "Diminuir quantidade",
       "increase": "Aumentar quantidade",
-      "soldOutNotice": "Esgotado nesta edição. Fique de olho no Instagram da campanha para saber quando volta."
+      "soldOutNotice": "Esgotado nesta edição. Fique de olho no Instagram da campanha para saber quando volta.",
+      "chooseSize": "Escolha um tamanho para adicionar à sacolinha.",
+      "addToBag": "Adicionar à sacolinha"
+    },
+    "bag": {
+      "title": "Sacolinha",
+      "open_one": "Abrir sacolinha, {{count}} item",
+      "open_other": "Abrir sacolinha, {{count}} itens",
+      "close": "Fechar sacolinha",
+      "empty": "Sua sacolinha está vazia. Escolha um produto e adicione aqui.",
+      "each": "{{price}} cada",
+      "remove": "Remover {{name}}",
+      "quantityOf": "Quantidade de {{name}}",
+      "total": "Total",
+      "preview": "Mensagem que vai para o WhatsApp",
+      "send": "Enviar pelo WhatsApp",
+      "newTab": "(abre em nova aba)",
+      "note": "O pagamento e a retirada são combinados na conversa.",
+      "message": {
+        "greeting": "Olá! Quero fazer um pedido na Lojinha da Campanha do Agasalho:",
+        "total": "Total: {{total}}"
+      }
     }
   },
   "participate": {
