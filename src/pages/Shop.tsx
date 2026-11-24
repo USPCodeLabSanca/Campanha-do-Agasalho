@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { PageHero } from '../components/PageHero'
 import { BagButton } from '../components/shop/BagButton'
 import { BagDrawer } from '../components/shop/BagDrawer'
+import { ShopHowItWorks } from '../components/shop/ShopHowItWorks'
 import { ShopProducts } from '../components/shop/ShopProducts'
 import { useBag } from '../hooks/useBag'
 
@@ -25,6 +26,7 @@ export function Shop() {
       />
       <div>
         <ShopProducts onAddToBag={bag.addItem} />
+        <ShopHowItWorks />
 
         {bag.totalItems > 0 && (
           <BagButton
