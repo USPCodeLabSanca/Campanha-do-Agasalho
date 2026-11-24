@@ -13,6 +13,7 @@ type ButtonProps = {
   to?: string
   onClick?: () => void
   disabled?: boolean
+  type?: 'button' | 'submit'
 }
 
 const baseClasses =
@@ -42,6 +43,7 @@ export function Button({
   to,
   onClick,
   disabled,
+  type = 'button',
 }: ButtonProps) {
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]}`
 
@@ -66,7 +68,7 @@ export function Button({
 
   return (
     <button
-      type="button"
+      type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}

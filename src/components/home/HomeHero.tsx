@@ -1,15 +1,11 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from '../Button'
+import { Snowfall } from '../Snowfall'
 import { StatCard } from '../StatCard'
 
 import welcomePt from '../../assets/images/floq_welcome_pt.svg'
 import welcomeEn from '../../assets/images/floq_welcome_en.svg'
-import snowFlake from '../../assets/images/snowflake.svg'
-import snowBall from '../../assets/images/snowball.svg'
-
-const FLAKES_COUNT = 65
 
 const infoCards = [
   {
@@ -34,23 +30,7 @@ const infoCards = [
   },
 ] as const
 
-function createFlakes() {
-  const flakes = []
-
-  for (let i = 0; i < FLAKES_COUNT; i++) {
-    flakes.push({
-      top: Math.random() * 100,
-      left: Math.random() * 100,
-      src: Math.random() < 0.6 ? snowFlake : snowBall,
-    })
-  }
-
-  return flakes
-}
-
 export function HomeHero() {
-  const [flakes] = useState(() => createFlakes())
-
   const { t, i18n } = useTranslation()
 
   const welcomeImage = i18n.resolvedLanguage === 'en' ? welcomeEn : welcomePt
@@ -60,16 +40,7 @@ export function HomeHero() {
       className="relative overflow-hidden bg-linear-to-b from-blue-1 to-blue-5 section-spacing text-white"
       aria-labelledby="hero-title"
     >
-      {flakes.map((flake, index) => (
-        <img
-          key={index}
-          src={flake.src}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute"
-          style={{ top: `${flake.top}%`, left: `${flake.left}%` }}
-        />
-      ))}
+      <Snowfall />
       <div className="relative page-container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <h1
