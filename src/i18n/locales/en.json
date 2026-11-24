@@ -205,6 +205,71 @@
     "hero": {
       "title": "Every bit of help warms",
       "description": "Donating clothes is just the start. The shop, raffles, partnerships and volunteering also keep the drive going."
+    },
+    "options": {
+      "title": "Choose your way",
+      "donate": {
+        "title": "Donate clothes",
+        "description": "Coats, blankets and shoes in good condition, at any collection point.",
+        "link": "See points"
+      },
+      "shop": {
+        "title": "Buy from the shop",
+        "description": "Keychains, T-shirts and mugs featuring the floquinhos. All proceeds go back to the drive.",
+        "link": "See items"
+      },
+      "raffles": {
+        "title": "Join the raffles",
+        "description": "Prizes from local partners. All proceeds go back to the drive.",
+        "link": "Follow on Instagram"
+      },
+      "partner": {
+        "title": "Become a partner",
+        "description": "Shops and schools can host a box or sponsor activities.",
+        "link": "Get in touch"
+      },
+      "volunteer": {
+        "title": "Volunteer",
+        "description": "USP students join through the teams; the community helps with one-off activities.",
+        "link": "Meet the teams"
+      }
+    },
+    "whatToDonate": {
+      "title": "What to donate?",
+      "subtitle": "Anything that keeps people warm, for adults and children.",
+      "items": {
+        "coats": "Coats",
+        "sweatshirts": "Sweatshirts",
+        "pants": "Pants",
+        "socks": "Socks",
+        "blankets": "Blankets",
+        "shoes": "Shoes",
+        "hatsAndGloves": "Hats and gloves",
+        "kidsClothes": "Kids' clothes"
+      }
+    },
+    "beforeDelivery": {
+      "title": "Before you drop off",
+      "subtitle": "Four simple steps that save the team hours of sorting and help donations arrive in better shape.",
+      "tips": {
+        "clean": {
+          "title": "Clean items",
+          "description": "Washed and dry, out of respect for those who receive them and to speed up sorting."
+        },
+        "goodCondition": {
+          "title": "In usable condition",
+          "description": "No large tears, permanent stains or broken zippers."
+        },
+        "pairs": {
+          "title": "Shoes in pairs",
+          "description": "Tie pairs together so they don't get separated in transit."
+        },
+        "closedBags": {
+          "title": "Closed bags",
+          "description": "Keeps them dry and makes pickup easier."
+        }
+      },
+      "button": "Find a collection point"
     }
   },
   "collectionPoints": {
