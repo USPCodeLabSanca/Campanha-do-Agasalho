@@ -217,6 +217,32 @@
     "hero": {
       "title": "Sua doação tem endereço",
       "description": "Instituições de São Carlos que recebem as peças e conhecem de perto quem precisa delas."
+    },
+    "path": {
+      "title": "Para onde vai a sua doação?",
+      "steps": {
+        "sorting": {
+          "title": "Triagem",
+          "description": "Voluntários conferem estado, tipo e tamanho de cada peça."
+        },
+        "division": {
+          "title": "Divisão por demanda",
+          "description": "Cada entidade informa o que mais precisa naquele inverno."
+        },
+        "delivery": {
+          "title": "Entrega",
+          "description": "Lotes são levados diretamente às entidades pela campanha."
+        },
+        "families": {
+          "title": "Chegada às famílias",
+          "description": "Entidades distribuem a quem acompanham no dia a dia."
+        }
+      }
+    },
+    "partners": {
+      "title": "Entidades parceiras",
+      "target": "Atende:",
+      "description": "Como contribuimos:"
     }
   },
   "impact": {
