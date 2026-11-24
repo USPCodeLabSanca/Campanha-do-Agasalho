@@ -387,6 +387,20 @@
       "loading": "Loading products...",
       "error": "We couldn't load the products. Please try again later.",
       "empty": "There are no products in the shop yet."
+    },
+    "dialog": {
+      "close": "Close",
+      "size": "Size",
+      "sizeGuide": {
+        "toggle": "Check our size guide",
+        "caption": "Garment measurements laid flat, in centimeters.",
+        "width": "Width",
+        "length": "Length"
+      },
+      "quantity": "Quantity",
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity",
+      "soldOutNotice": "Sold out this edition. Keep an eye on the drive's Instagram to find out when it's back."
     }
   },
   "participate": {
