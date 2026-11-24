@@ -9,6 +9,13 @@ const mockProducts: Product[] = [
     description:
       'Camiseta de algodão azul com a arte da edição 2026 na frente e o logo da campanha nas costas.',
     sizes: ['PP', 'P', 'M', 'G', 'GG'],
+    sizeGuide: [
+      { size: 'PP', width: 46, length: 64 },
+      { size: 'P', width: 50, length: 68 },
+      { size: 'M', width: 53, length: 71 },
+      { size: 'G', width: 56, length: 74 },
+      { size: 'GG', width: 60, length: 77 },
+    ],
   },
   {
     id: 'caneca-floquinho',

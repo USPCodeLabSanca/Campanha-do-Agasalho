@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import { CategoryFilter, type CategoryFilterValue } from './CategoryFilter'
 import { ProductCard } from './ProductCard'
+import { ProductDialog } from './ProductDialog'
 
 import type { Product } from '../../types/product'
 
@@ -11,6 +12,7 @@ type ShopCatalogProps = {
 
 export function ShopCatalog({ products }: ShopCatalogProps) {
   const [selected, setSelected] = useState<CategoryFilterValue>('all')
+  const [openProduct, setOpenProduct] = useState<Product | null>(null)
 
   const visibleProducts =
     selected === 'all'
@@ -27,10 +29,20 @@ export function ShopCatalog({ products }: ShopCatalogProps) {
       >
         {visibleProducts.map((product) => (
           <li key={product.id}>
-            <ProductCard product={product} />
+            <ProductCard
+              product={product}
+              onSelect={() => setOpenProduct(product)}
+            />
           </li>
         ))}
       </ul>
+
+      {openProduct && (
+        <ProductDialog
+          product={openProduct}
+          onClose={() => setOpenProduct(null)}
+        />
+      )}
     </div>
   )
 }
