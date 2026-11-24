@@ -424,6 +424,27 @@
         "greeting": "Olá! Quero fazer um pedido na Lojinha da Campanha do Agasalho:",
         "total": "Total: {{total}}"
       }
+    },
+    "howItWorks": {
+      "title": "Como funciona?",
+      "steps": {
+        "choose": {
+          "title": "Escolha as suas peças",
+          "description": "Decida quais peças mais combinam com você e coloque na sacolinha."
+        },
+        "size": {
+          "title": "Verifique o tamanho",
+          "description": "Se precisar, confira o guia e escolha o tamanho ideal para você."
+        },
+        "contact": {
+          "title": "Envie pelo WhatsApp",
+          "description": "Mande o pedido pela sacolinha e garanta as suas peças."
+        },
+        "pickup": {
+          "title": "Retire suas peças",
+          "description": "Combine o pagamento e o local para receber o seu pedido!"
+        }
+      }
     }
   },
   "participate": {

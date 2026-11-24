@@ -424,6 +424,27 @@
         "greeting": "Hi! I'd like to place an order from the Winter Clothing Drive shop:",
         "total": "Total: {{total}}"
       }
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "steps": {
+        "choose": {
+          "title": "Choose your items",
+          "description": "Pick the items you like best and put them in your bag."
+        },
+        "size": {
+          "title": "Check the size",
+          "description": "If needed, check the guide and choose the right size for you."
+        },
+        "contact": {
+          "title": "Send it via WhatsApp",
+          "description": "Send your order from the bag and secure your items."
+        },
+        "pickup": {
+          "title": "Pick up your items",
+          "description": "Arrange payment and where to get your order!"
+        }
+      }
     }
   },
   "participate": {
