@@ -387,6 +387,20 @@
       "loading": "Carregando produtos...",
       "error": "Não foi possível carregar os produtos. Tente novamente mais tarde.",
       "empty": "Ainda não há produtos na lojinha."
+    },
+    "dialog": {
+      "close": "Fechar",
+      "size": "Tamanho",
+      "sizeGuide": {
+        "toggle": "Confira nosso guia de tamanhos",
+        "caption": "Medidas da peça esticada, em centímetros.",
+        "width": "Largura",
+        "length": "Comprimento"
+      },
+      "quantity": "Quantidade",
+      "decrease": "Diminuir quantidade",
+      "increase": "Aumentar quantidade",
+      "soldOutNotice": "Esgotado nesta edição. Fique de olho no Instagram da campanha para saber quando volta."
     }
   },
   "participate": {
