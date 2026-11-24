@@ -23,12 +23,7 @@ export function AdminPageHeader({
       </div>
 
       {onAdd && (
-        <Button
-          variant="dark"
-          size="small"
-          onClick={onAdd}
-          rightIcon={<PlusIcon size={18} />}
-        >
+        <Button size="small" onClick={onAdd} rightIcon={<PlusIcon size={18} />}>
           {addLabel}
         </Button>
       )}
