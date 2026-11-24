@@ -205,6 +205,71 @@
     "hero": {
       "title": "Toda ajuda aquece",
       "description": "Doar roupa é o começo. Lojinha, rifas, parcerias e voluntariado também mantêm a campanha de pé."
+    },
+    "options": {
+      "title": "Escolha a sua forma",
+      "donate": {
+        "title": "Doar roupas",
+        "description": "Agasalhos, cobertores e calçados em bom estado, em qualquer ponto de coleta.",
+        "link": "Ver pontos"
+      },
+      "shop": {
+        "title": "Comprar na lojinha",
+        "description": "Chaveiros, camisetas e canecas dos floquinhos. Toda a renda volta para a campanha.",
+        "link": "Ver itens"
+      },
+      "raffles": {
+        "title": "Participar de rifas",
+        "description": "Prêmios de parceiros locais. Toda a renda volta para a campanha.",
+        "link": "Acompanhar no Instagram"
+      },
+      "partner": {
+        "title": "Ser parceiro",
+        "description": "Comércios e escolas podem abrigar uma caixa ou patrocinar ações.",
+        "link": "Falar com a gente"
+      },
+      "volunteer": {
+        "title": "Ser voluntário",
+        "description": "Estudantes da USP entram pelos núcleos; a cidade ajuda em ações pontuais.",
+        "link": "Conhecer os núcleos"
+      }
+    },
+    "whatToDonate": {
+      "title": "O que doar?",
+      "subtitle": "Tudo que aquece, para adultos e crianças.",
+      "items": {
+        "coats": "Agasalhos",
+        "sweatshirts": "Moletons",
+        "pants": "Calças",
+        "socks": "Meias",
+        "blankets": "Mantas",
+        "shoes": "Calçados",
+        "hatsAndGloves": "Toucas e luvas",
+        "kidsClothes": "Roupas infantis"
+      }
+    },
+    "beforeDelivery": {
+      "title": "Antes de entregar",
+      "subtitle": "Quatro cuidados simples que economizam horas de triagem para a equipe e chegam melhor a quem recebe.",
+      "tips": {
+        "clean": {
+          "title": "Peças limpas",
+          "description": "Lavadas e secas, por respeito a quem recebe e para agilizar a triagem."
+        },
+        "goodCondition": {
+          "title": "Em condições de uso",
+          "description": "Sem rasgos grandes, manchas permanentes ou zíperes quebrados."
+        },
+        "pairs": {
+          "title": "Calçados em pares",
+          "description": "Amarre os pares para não se perderem no transporte."
+        },
+        "closedBags": {
+          "title": "Sacolas fechadas",
+          "description": "Protege da chuva e facilita o recolhimento."
+        }
+      },
+      "button": "Encontrar ponto de coleta"
     }
   },
   "collectionPoints": {
