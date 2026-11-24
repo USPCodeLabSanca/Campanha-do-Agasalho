@@ -400,7 +400,28 @@
       "quantity": "Quantity",
       "decrease": "Decrease quantity",
       "increase": "Increase quantity",
-      "soldOutNotice": "Sold out this edition. Keep an eye on the drive's Instagram to find out when it's back."
+      "soldOutNotice": "Sold out this edition. Keep an eye on the drive's Instagram to find out when it's back.",
+      "chooseSize": "Choose a size to add it to your bag.",
+      "addToBag": "Add to bag"
+    },
+    "bag": {
+      "title": "Bag",
+      "open_one": "Open bag, {{count}} item",
+      "open_other": "Open bag, {{count}} items",
+      "close": "Close bag",
+      "empty": "Your bag is empty. Choose a product and add it here.",
+      "each": "{{price}} each",
+      "remove": "Remove {{name}}",
+      "quantityOf": "Quantity of {{name}}",
+      "total": "Total",
+      "preview": "Message that goes to WhatsApp",
+      "send": "Send via WhatsApp",
+      "newTab": "(opens in a new tab)",
+      "note": "Payment and pickup are arranged in the chat.",
+      "message": {
+        "greeting": "Hi! I'd like to place an order from the Winter Clothing Drive shop:",
+        "total": "Total: {{total}}"
+      }
     }
   },
   "participate": {
