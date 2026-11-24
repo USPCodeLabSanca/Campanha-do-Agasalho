@@ -372,6 +372,21 @@
     "hero": {
       "title": "Vista a nossa causa",
       "description": "Roupas e peças da Campanha do Agasalho para quem participa, apoia e ajuda a construir essa iniciativa."
+    },
+    "products": {
+      "title": "Encontre a peça perfeita para você",
+      "subtitle": "Escolha as peças, monte sua sacolinha e envie pelo WhatsApp. O pagamento e a retirada são combinados na conversa.",
+      "filterLabel": "Filtrar por categoria",
+      "categories": {
+        "all": "Todos",
+        "clothes": "Roupas",
+        "mugs": "Canecas",
+        "accessories": "Acessórios"
+      },
+      "soldOut": "Esgotado",
+      "loading": "Carregando produtos...",
+      "error": "Não foi possível carregar os produtos. Tente novamente mais tarde.",
+      "empty": "Ainda não há produtos na lojinha."
     }
   },
   "participate": {

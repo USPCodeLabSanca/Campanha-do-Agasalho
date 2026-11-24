@@ -372,6 +372,21 @@
     "hero": {
       "title": "Wear our cause",
       "description": "Clothing and items from the Winter Clothing Drive for everyone who takes part in, supports and helps build this initiative."
+    },
+    "products": {
+      "title": "Find the perfect piece for you",
+      "subtitle": "Pick your items, fill your bag and send it via WhatsApp. Payment and pickup are arranged in the chat.",
+      "filterLabel": "Filter by category",
+      "categories": {
+        "all": "All",
+        "clothes": "Clothing",
+        "mugs": "Mugs",
+        "accessories": "Accessories"
+      },
+      "soldOut": "Sold out",
+      "loading": "Loading products...",
+      "error": "We couldn't load the products. Please try again later.",
+      "empty": "There are no products in the shop yet."
     }
   },
   "participate": {
