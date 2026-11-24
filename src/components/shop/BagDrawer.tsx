@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TrashIcon, WhatsappLogoIcon, XIcon } from '@phosphor-icons/react'
 
@@ -14,6 +14,7 @@ type BagDrawerProps = {
   totalPrice: number
   onUpdateQuantity: (key: string, quantity: number) => void
   onRemove: (key: string) => void
+  onClear: () => void
   onClose: () => void
 }
 
@@ -22,10 +23,12 @@ export function BagDrawer({
   totalPrice,
   onUpdateQuantity,
   onRemove,
+  onClear,
   onClose,
 }: BagDrawerProps) {
   const { t, i18n } = useTranslation()
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const [hasSent, setHasSent] = useState(false)
   const language = i18n.resolvedLanguage
 
   useEffect(() => {
@@ -145,6 +148,17 @@ export function BagDrawer({
                 ))}
               </ul>
 
+              <div className="mt-3 flex justify-end">
+                <button
+                  type="button"
+                  onClick={onClear}
+                  className="flex cursor-pointer items-center gap-1 text-small font-bold text-blue-4 transition hover:text-orange-2"
+                >
+                  <TrashIcon size={16} aria-hidden="true" />
+                  {t('shop.bag.clear')}
+                </button>
+              </div>
+
               <h3 className="mt-6 text-caption font-bold tracking-wider text-blue-4 uppercase">
                 {t('shop.bag.preview')}
               </h3>
@@ -163,15 +177,32 @@ export function BagDrawer({
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setHasSent(true)}
                 className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-whatsapp px-5 py-3 text-button text-blue-1 transition hover:brightness-95"
               >
                 <WhatsappLogoIcon size={24} aria-hidden="true" />
                 {t('shop.bag.send')}
                 <span className="sr-only">{t('shop.bag.newTab')}</span>
               </a>
-              <p className="mt-2 text-center text-caption text-blue-4">
-                {t('shop.bag.note')}
-              </p>
+              {hasSent ? (
+                <div
+                  role="status"
+                  className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-xl bg-orange-3 p-3 text-small"
+                >
+                  <span>{t('shop.bag.sentQuestion')}</span>
+                  <button
+                    type="button"
+                    onClick={onClear}
+                    className="cursor-pointer font-bold underline decoration-orange-1 decoration-2 underline-offset-4 transition hover:text-orange-2"
+                  >
+                    {t('shop.bag.clear')}
+                  </button>
+                </div>
+              ) : (
+                <p className="mt-2 text-center text-caption text-blue-4">
+                  {t('shop.bag.note')}
+                </p>
+              )}
             </div>
           </>
         )}
