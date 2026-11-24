@@ -1,9 +1,10 @@
-type StepCardVariant = 'orange' | 'purple'
+type StepCardVariant = 'orange' | 'purple' | 'green'
 
 type StepCardProps = {
-  step: number
+  step?: number
   title: string
   description: string
+  image?: string
   variant?: StepCardVariant
 }
 
@@ -16,26 +17,41 @@ const variantClasses = {
     box: 'border-purple-1/40',
     circle: 'bg-purple-3',
   },
+  green: {
+    box: 'border-green-1/40',
+    circle: 'bg-green-2',
+  },
 }
 
 export function StepCard({
   step,
   title,
   description,
+  image,
   variant = 'orange',
 }: StepCardProps) {
   return (
     <div
-      className={`h-full card p-8 text-blue-1 ${variantClasses[variant].box}`}
+      className={`flex h-full flex-col gap-3 card text-blue-1 ${image ? 'p-6' : 'p-8'} ${variantClasses[variant].box}`}
     >
-      <span
-        className={`flex size-12 items-center justify-center rounded-full text-h4 ${variantClasses[variant].circle}`}
-        aria-hidden="true"
-      >
-        {step}
-      </span>
-      <h3 className="mt-3 text-h4">{title}</h3>
-      <p className="mt-3 text-body">{description}</p>
+      {step && (
+        <span
+          className={`flex size-12 items-center justify-center rounded-full text-h4 ${variantClasses[variant].circle}`}
+          aria-hidden="true"
+        >
+          {step}
+        </span>
+      )}
+      {image && (
+        <img
+          src={image}
+          alt=""
+          loading="lazy"
+          className="aspect-264/183 w-full rounded-xl object-cover object-top"
+        />
+      )}
+      <h3 className="text-h4">{title}</h3>
+      <p className="text-body">{description}</p>
     </div>
   )
 }
