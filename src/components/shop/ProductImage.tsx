@@ -4,7 +4,7 @@ import { CoffeeIcon, TagIcon, TShirtIcon } from '@phosphor-icons/react'
 import type { Product } from '../../types/product'
 
 type ProductImageProps = {
-  product: Product
+  product: Pick<Product, 'category' | 'image' | 'isSoldOut'>
 }
 
 const placeholderIcons = {

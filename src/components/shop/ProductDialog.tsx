@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { MinusIcon, PlusIcon, XIcon } from '@phosphor-icons/react'
+import { HandbagIcon, WarningCircleIcon, XIcon } from '@phosphor-icons/react'
 
+import { Button } from '../Button'
 import { ProductImage } from './ProductImage'
+import { QuantityStepper } from './QuantityStepper'
 import { SizePicker } from './SizePicker'
 
 import type { Product } from '../../types/product'
@@ -10,16 +12,20 @@ import { formatPrice } from '../../utils/formatPrice'
 
 type ProductDialogProps = {
   product: Product
+  onAddToBag: (product: Product, size: string | null, quantity: number) => void
   onClose: () => void
 }
 
-const MAX_QUANTITY = 10
-
-export function ProductDialog({ product, onClose }: ProductDialogProps) {
+export function ProductDialog({
+  product,
+  onAddToBag,
+  onClose,
+}: ProductDialogProps) {
   const { t, i18n } = useTranslation()
   const dialogRef = useRef<HTMLDialogElement>(null)
   const [size, setSize] = useState<string | null>(null)
   const [quantity, setQuantity] = useState(1)
+  const [isMissingSize, setIsMissingSize] = useState(false)
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -36,6 +42,21 @@ export function ProductDialog({ product, onClose }: ProductDialogProps) {
     if (event.target === dialogRef.current) {
       close()
     }
+  }
+
+  function handleSelectSize(selectedSize: string) {
+    setSize(selectedSize)
+    setIsMissingSize(false)
+  }
+
+  function handleAddToBag() {
+    if (product.sizes && !size) {
+      setIsMissingSize(true)
+      return
+    }
+
+    onAddToBag(product, size, quantity)
+    close()
   }
 
   return (
@@ -83,48 +104,48 @@ export function ProductDialog({ product, onClose }: ProductDialogProps) {
           ) : (
             <>
               {product.sizes && (
-                <SizePicker
-                  sizes={product.sizes}
-                  sizeGuide={product.sizeGuide}
-                  selected={size}
-                  onSelect={setSize}
-                />
+                <div>
+                  <SizePicker
+                    sizes={product.sizes}
+                    sizeGuide={product.sizeGuide}
+                    selected={size}
+                    onSelect={handleSelectSize}
+                  />
+                  {isMissingSize && (
+                    <p
+                      role="alert"
+                      className="mt-2 flex items-center gap-2 text-small font-bold"
+                    >
+                      <WarningCircleIcon
+                        size={20}
+                        weight="fill"
+                        className="shrink-0 text-orange-2"
+                        aria-hidden="true"
+                      />
+                      {t('shop.dialog.chooseSize')}
+                    </p>
+                  )}
+                </div>
               )}
 
               <div>
-                <p id="quantity-label" className="text-strong">
-                  {t('shop.dialog.quantity')}
-                </p>
-                <div
-                  role="group"
-                  aria-labelledby="quantity-label"
-                  className="mt-2 inline-flex items-center gap-1 rounded-full border-2 border-blue-1 p-1"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setQuantity(quantity - 1)}
-                    disabled={quantity === 1}
-                    aria-label={t('shop.dialog.decrease')}
-                    className="flex size-8 cursor-pointer items-center justify-center rounded-full transition hover:bg-green-3 disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    <MinusIcon size={16} aria-hidden="true" />
-                  </button>
-                  <output
-                    aria-live="polite"
-                    className="min-w-8 text-center text-button"
-                  >
-                    {quantity}
-                  </output>
-                  <button
-                    type="button"
-                    onClick={() => setQuantity(quantity + 1)}
-                    disabled={quantity === MAX_QUANTITY}
-                    aria-label={t('shop.dialog.increase')}
-                    className="flex size-8 cursor-pointer items-center justify-center rounded-full transition hover:bg-green-3 disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    <PlusIcon size={16} aria-hidden="true" />
-                  </button>
+                <p className="text-strong">{t('shop.dialog.quantity')}</p>
+                <div className="mt-2">
+                  <QuantityStepper
+                    label={t('shop.dialog.quantity')}
+                    value={quantity}
+                    onChange={setQuantity}
+                  />
                 </div>
+              </div>
+
+              <div className="pt-2">
+                <Button
+                  onClick={handleAddToBag}
+                  rightIcon={<HandbagIcon size={20} />}
+                >
+                  {t('shop.dialog.addToBag')}
+                </Button>
               </div>
             </>
           )}
