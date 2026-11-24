@@ -14,8 +14,8 @@ export type ErrorCode = keyof typeof ErrorCodes;
 export class AppError extends Error {
     public readonly status: number;
 
-    constructor(public readonly code: ErrorCode) {
-        super(ErrorCodes[code].message);
+    constructor(public readonly code: ErrorCode, options?: { cause?: unknown }) {
+        super(ErrorCodes[code].message, options);
         this.status = ErrorCodes[code].status;
     }
 }
