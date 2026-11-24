@@ -122,6 +122,12 @@
   font-weight: 400;
 }
 
+@utility text-caption {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
 @utility page-container {
   width: 100%;
   max-width: 80rem;

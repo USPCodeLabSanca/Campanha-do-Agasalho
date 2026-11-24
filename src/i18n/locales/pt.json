@@ -249,6 +249,58 @@
     "hero": {
       "title": "Cada peça conta",
       "description": "Quanto foi arrecadado, para onde foi e quantas pessoas alcançamos em cada edição."
+    },
+    "numbers": {
+      "title": "Nossos números",
+      "subtitle": "Veja o total de todas as edições ou escolha um ano.",
+      "loading": "Carregando os números...",
+      "error": "Não foi possível carregar os números agora. Tente de novo mais tarde.",
+      "empty": "Os números ainda não foram publicados.",
+      "selectorLabel": "Escolher edição",
+      "all": "Todas",
+      "ongoing": "em andamento",
+      "ongoingNotice": "A edição de {{year}} ainda está acontecendo. Os números são parciais.",
+      "stats": {
+        "pieces": "peças arrecadadas",
+        "editions": "edições",
+        "volunteers": "voluntários",
+        "record": "maior arrecadação",
+        "collectionPoints": "pontos de coleta",
+        "collectionPointsPlace": "USP e São Carlos",
+        "entities": "entidades atendidas",
+        "since": "desde {{year}}",
+        "edition": "edição {{year}}",
+        "inYear": "em {{year}}",
+        "soFar": "até agora",
+        "allEditions": "em todas as edições",
+        "teams": "nos cinco núcleos"
+      },
+      "chart": {
+        "title": "Peças por edição",
+        "hintAll": "Escolha um ano acima para destacá-lo no gráfico.",
+        "hintYear": "O ano escolhido aparece em laranja.",
+        "legend": "Listrado: edição em andamento, números parciais",
+        "edition": "Edição",
+        "pieces": "Peças arrecadadas"
+      },
+      "destinations": {
+        "title": "Para onde foram as peças",
+        "noteAll": "Por tipo de entidade, média das edições.",
+        "noteYear": "Por tipo de entidade, em {{year}}.",
+        "link": "Conheça as entidades parceiras",
+        "types": {
+          "shelters": "Abrigos e casas de acolhida",
+          "elderly": "Instituições para idosos",
+          "childcare": "Creches e escolas",
+          "socialProjects": "Projetos sociais e ONGs",
+          "families": "Famílias atendidas pelo CRAS"
+        }
+      }
+    },
+    "testimonial": {
+      "quote": "Com os cobertores que chegaram em junho, conseguimos passar o inverno sem ninguém dormir com frio.",
+      "name": "Maria, coordenadora",
+      "organization": "Casa de acolhida parceira"
     }
   },
   "shop": {
