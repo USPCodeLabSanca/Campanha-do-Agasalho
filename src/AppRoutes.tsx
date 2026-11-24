@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router'
 
 import { SiteLayout } from './layouts/SiteLayout'
+import { AdminLayout } from './layouts/AdminLayout'
 
 import { Home } from './pages/Home'
 import { Campaign } from './pages/Campaign'
@@ -13,6 +14,7 @@ import { Shop } from './pages/Shop'
 import { NotFound } from './pages/NotFound'
 import { AdminLogin } from './pages/admin/AdminLogin'
 import { AdminHome } from './pages/admin/AdminHome'
+import { AdminComingSoon } from './pages/admin/AdminComingSoon'
 
 export function AppRoutes() {
   return (
@@ -29,8 +31,35 @@ export function AppRoutes() {
         <Route path="/*" element={<NotFound />} />
       </Route>
 
-      <Route path="/admin" element={<AdminHome />} />
       <Route path="/admin/login" element={<AdminLogin />} />
+
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<AdminHome />} />
+        <Route
+          path="pontos-de-coleta"
+          element={<AdminComingSoon title="Pontos de coleta" />}
+        />
+        <Route
+          path="entidades"
+          element={<AdminComingSoon title="Entidades" />}
+        />
+        <Route
+          path="produtos"
+          element={<AdminComingSoon title="Produtos da lojinha" />}
+        />
+        <Route
+          path="edicoes"
+          element={<AdminComingSoon title="Edições e números" />}
+        />
+        <Route
+          path="linha-do-tempo"
+          element={<AdminComingSoon title="Linha do tempo" />}
+        />
+        <Route
+          path="contatos"
+          element={<AdminComingSoon title="Contatos e redes" />}
+        />
+      </Route>
     </Routes>
   )
 }
