@@ -9,6 +9,7 @@ import { SizePicker } from './SizePicker'
 
 import type { Product } from '../../types/product'
 import { formatPrice } from '../../utils/formatPrice'
+import { getTranslatedText } from '../../utils/getTranslatedText'
 
 type ProductDialogProps = {
   product: Product
@@ -95,7 +96,9 @@ export function ProductDialog({
             </p>
           </div>
 
-          <p className="text-body">{product.description}</p>
+          <p className="text-body">
+            {getTranslatedText(product.description, i18n.resolvedLanguage)}
+          </p>
 
           {product.isSoldOut ? (
             <p className="rounded-xl bg-orange-3 p-4 text-body">
