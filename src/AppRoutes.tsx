@@ -17,6 +17,7 @@ import { AdminHome } from './pages/admin/AdminHome'
 import { AdminComingSoon } from './pages/admin/AdminComingSoon'
 import { AdminCollectionPoints } from './pages/admin/AdminCollectionPoints'
 import { AdminEntities } from './pages/admin/AdminEntities'
+import { AdminProducts } from './pages/admin/AdminProducts'
 
 export function AppRoutes() {
   return (
@@ -39,10 +40,7 @@ export function AppRoutes() {
         <Route index element={<AdminHome />} />
         <Route path="pontos-de-coleta" element={<AdminCollectionPoints />} />
         <Route path="entidades" element={<AdminEntities />} />
-        <Route
-          path="produtos"
-          element={<AdminComingSoon title="Produtos da lojinha" />}
-        />
+        <Route path="produtos" element={<AdminProducts />} />
         <Route
           path="edicoes"
           element={<AdminComingSoon title="Edições e números" />}
