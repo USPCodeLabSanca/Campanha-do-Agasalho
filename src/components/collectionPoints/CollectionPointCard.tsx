@@ -1,6 +1,7 @@
 import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import arrowUpRight from '../../assets/images/ArrowUpRight.svg'
+import { ArrowUpRightIcon } from '@phosphor-icons/react'
+
 import type { CollectionPoint } from '../../types/collectionPoint'
 import { googleMapsUrl } from '../../utils/collectionPoints'
 import { Button } from '../Button'
@@ -22,9 +23,6 @@ export const CollectionPointCard = forwardRef<
 ) {
   const { t } = useTranslation()
 
-  const openMap = () =>
-    window.open(googleMapsUrl(point), '_blank', 'noopener,noreferrer')
-
   return (
     <li
       ref={ref}
@@ -33,11 +31,11 @@ export const CollectionPointCard = forwardRef<
         highlighted ? 'border-pink-1' : 'border-blue-1/20',
       ].join(' ')}
     >
-      <h3 className="text-lg font-bold text-blue-1">{point.name}</h3>
+      <h3 className="text-h4">{point.name}</h3>
 
-      <p className="text-sm text-blue-1/80">{point.address}</p>
+      <p className="text-small text-blue-1/80">{point.address}</p>
 
-      <p className="text-sm text-orange-1">
+      <p className="text-small text-orange-2">
         {point.hours}
         {distanceKm !== undefined && (
           <span className="ml-2 text-blue-1/70">
@@ -50,8 +48,8 @@ export const CollectionPointCard = forwardRef<
         <Button
           variant="dark"
           size="small"
-          onClick={openMap}
-          rightIcon={<img src={arrowUpRight} alt="" className="size-4" />}
+          href={googleMapsUrl(point)}
+          rightIcon={<ArrowUpRightIcon size={16} weight="bold" />}
         >
           {t('collection.card.openMap')}
         </Button>
