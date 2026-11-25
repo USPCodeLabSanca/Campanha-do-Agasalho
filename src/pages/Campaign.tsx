@@ -6,6 +6,7 @@ import { PageHero } from '../components/PageHero'
 import { CampaignValues } from '../components/campaign/CampaignValues'
 import { CampaignHistory } from '../components/campaign/CampaignHistory'
 import { CampaignHowItWorks } from '../components/campaign/CampaignHowItWorks'
+import { CampaignMemories } from '../components/campaign/CampaignCarousel'
 
 import floqGroup from '../assets/images/floq_group.svg'
 
@@ -31,6 +32,7 @@ export function Campaign() {
       <CampaignValues />
       <CampaignHistory />
       <CampaignHowItWorks />
+      <CampaignMemories />
     </>
   )
 }

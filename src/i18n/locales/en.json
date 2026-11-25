@@ -172,6 +172,10 @@
           "description": "The organizations deliver the items to the families they support."
         }
       }
+    },
+    "carousel": {
+      "title": "Campaign memories",
+      "description": "Check out some memories from past years of the Campaign."
     }
   },
   "howToHelp": {

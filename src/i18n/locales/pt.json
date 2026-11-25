@@ -172,6 +172,10 @@
           "description": "As entidades entregam às famílias que acompanham."
         }
       }
+    },
+    "carousel": {
+      "title": "Memórias da Campanha",
+      "description": "Confira algumas lembranças da Campanha em anos anteriores."
     }
   },
   "howToHelp": {
