@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import { ErrorCode } from "../constants/ErrorCode.js";
+// import { ErrorCode } from "../constants/ErrorCode.js";
 import jwt from "jsonwebtoken"
 
 export function authMiddleware(req: Request, res: Response, next: NextFunction) {
@@ -7,7 +7,7 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
 
     if(!token) {
         return res.status(401).json({
-            code: ErrorCode.UNAUTHORIZED,
+            code: "UNAUTHENTICATED",
             message: "Token não encontrado",
             status: 401
         })
@@ -21,7 +21,7 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
     } catch(error) {
         if(error instanceof jwt.TokenExpiredError) {
             return res.status(401).json({
-                code: ErrorCode.UNAUTHORIZED,
+                code: "UNAUTHENTICATED",
                 message: "Token expirado",
                 status: 401
             })
@@ -29,7 +29,7 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
 
         if(error instanceof jwt.JsonWebTokenError) {
             return res.status(401).json({
-                code: ErrorCode.UNAUTHORIZED,
+                code: "UNAUTHENTICATED",
                 message: "Token inválido",
                 status: 401
             })
@@ -38,7 +38,7 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
         console.error("[AUTHMIDDLEWARE]: ", error);
 
         return res.status(500).json({
-            code: ErrorCode.INTERNAL_SERVER_ERROR,
+            code: "INTERNAL_SERVER_ERROR",
             message: "Ocorreu um erro interno",
             status: 500
         })
