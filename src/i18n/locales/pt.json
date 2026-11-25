@@ -461,7 +461,6 @@
   },
   "collection": {
     "title": "Pontos de coleta",
-    "subtitle": "Caixas espalhadas pela USP e pela cidade. Busque pelo nome ou filtre por bairro.",
     "count_one": "{{count}} ponto de coleta",
     "count_other": "{{count}} pontos de coleta",
     "empty": "Nenhum ponto encontrado com esses filtros. Tente outro nome ou limpe os filtros.",
@@ -481,9 +480,6 @@
     },
     "map": {
       "label": "Mapa dos pontos de coleta",
-      "loading": "Carregando mapa...",
-      "missingKey": "Mapa indisponível: chave do Google Maps não configurada.",
-      "error": "Não foi possível carregar o mapa. Tente novamente mais tarde.",
       "you": "Você está aqui"
     },
     "geoError": {

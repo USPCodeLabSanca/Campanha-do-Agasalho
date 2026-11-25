@@ -460,6 +460,7 @@
     }
   },
   "collection": {
+    "title": "Collection points",
     "count_one": "{{count}} collection point",
     "count_other": "{{count}} collection points",
     "empty": "No points found with these filters. Try another name or clear the filters.",
@@ -479,9 +480,6 @@
     },
     "map": {
       "label": "Collection points map",
-      "loading": "Loading map...",
-      "missingKey": "Map unavailable: Google Maps key is not configured.",
-      "error": "Could not load the map. Please try again later.",
       "you": "You are here"
     },
     "geoError": {
