@@ -6,6 +6,7 @@ import { Button } from '../Button'
 type AdminDrawerProps = {
   title: string
   isSaving: boolean
+  error?: string | null
   onSubmit: () => void
   onClose: () => void
   children: React.ReactNode
@@ -14,6 +15,7 @@ type AdminDrawerProps = {
 export function AdminDrawer({
   title,
   isSaving,
+  error,
   onSubmit,
   onClose,
   children,
@@ -69,13 +71,26 @@ export function AdminDrawer({
           {children}
         </div>
 
-        <div className="flex justify-end gap-3 border-t border-gray-2 p-4">
-          <Button variant="outlineDark" size="small" onClick={close}>
-            Cancelar
-          </Button>
-          <Button variant="dark" size="small" type="submit" disabled={isSaving}>
-            {isSaving ? 'Salvando...' : 'Salvar'}
-          </Button>
+        <div className="flex flex-col gap-3 border-t border-gray-2 p-4">
+          {error && (
+            <p role="alert" className="rounded-xl bg-pink-4 p-3 text-strong">
+              {error}
+            </p>
+          )}
+
+          <div className="flex justify-end gap-3">
+            <Button variant="outlineDark" size="small" onClick={close}>
+              Cancelar
+            </Button>
+            <Button
+              variant="dark"
+              size="small"
+              type="submit"
+              disabled={isSaving}
+            >
+              {isSaving ? 'Salvando...' : 'Salvar'}
+            </Button>
+          </div>
         </div>
       </form>
     </dialog>
