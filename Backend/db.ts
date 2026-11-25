@@ -2,6 +2,7 @@ import { MongoClient, Collection, Db } from "mongodb"
 import type { IUser } from "./interfaces/IUser.js"
 import type { IYear } from "./interfaces/IYear.js";
 import type { IEntity } from "./interfaces/IEntity.js";
+import type { ICampaignProduct } from "./interfaces/IProduct.js";
 
 const uri: string = process.env.MONGODB_URI || "";
 if (!uri) {
@@ -13,6 +14,7 @@ const client = new MongoClient(uri);
 export let userCollection: Collection<IUser>;
 export let yearCollection: Collection<IYear>
 export let entityCollection: Collection<IEntity>
+export let productCollection: Collection<ICampaignProduct>
 /* ^^ Caso haja necessidade de mais tabelas/collection, colocar aqui ^^ */
 // Ex:
 // export let testCollection: Collection<ITeste>;
@@ -30,6 +32,7 @@ export async function connectDb(): Promise<Db> {
     userCollection = db.collection<IUser>("user");
     yearCollection = db.collection<IYear>("year");
     entityCollection = db.collection<IEntity>("entity");
+    productCollection = db.collection<ICampaignProduct>("product");
     /* ^^ Caso haja necessidade de mais tabelas/collection, colocar aqui ^^ */
     // Ex:
     // testCollection = db.collection<ITeste>('test')
