@@ -19,21 +19,6 @@ export class CollectController {
         }
     }
 
-    // export interface ICollectPoint {
-    //   _id?: ObjectId;
-    //   name: string;
-    //   neighborhood: string;
-    //   address: string;
-    //   coordinates: {
-    //     lat: number;
-    //     lng: number;
-    //   };
-    //   operatingHours?: string;
-    //   isActive: boolean;
-    //   createdAt?: Date;
-    //   updatedAt?: Date;
-    // }
-
     async insertCollect(req: Request, res: Response): Promise<Response> {
         const body = req.body;
         const name = body.name;
@@ -121,7 +106,7 @@ export class CollectController {
                 throw new AppError("RESOURCE_NOT_FOUND");
             }
 
-            return res.status(200).json({ message: "Delete successfully completed" });
+            return res.status(200).json({ message: "Update successfully completed" });
         } catch(err: any) {
             return res.status(err.status).json({
                 code: err.code,
