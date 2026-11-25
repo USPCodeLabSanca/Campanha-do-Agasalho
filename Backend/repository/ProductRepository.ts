@@ -6,7 +6,7 @@ export class ProductRepository {
     constructor(private productCollection: Collection<ICampaignProduct>) {};
 
     async selectAllProduct(): Promise<ICampaignProduct[]> {
-        return await this.productCollection.find().toArray();
+        return await this.productCollection.find({}).toArray();
     }
 
     async insertProduct(productData: Omit<ICampaignProduct, "_id">): Promise<ICampaignProduct> {

@@ -1,3 +1,4 @@
+import { AppError } from "../errors/AppError.js";
 import type { ICampaignProduct } from "../interfaces/IProduct.js";
 import type { ProductRepository } from "../repository/ProductRepository.js";
 
@@ -5,15 +6,27 @@ export class ProductService {
     constructor(private productRepository: ProductRepository) {};
 
     async selectAllProduct(): Promise<ICampaignProduct[]> {
-        return await this.productRepository.selectAllProduct();
+        try {
+            return await this.productRepository.selectAllProduct();
+        } catch(error) {
+            throw new AppError("INTERNAL_SERVER_ERROR");
+        }
     }
 
     async insertProduct(productData: Omit<ICampaignProduct, "_id">): Promise<ICampaignProduct> {
-        return await this.productRepository.insertProduct(productData);
+        try {
+            return await this.productRepository.insertProduct(productData);
+        } catch(error) {
+            throw new AppError("INTERNAL_SERVER_ERROR");
+        }
     }
 
     async deleteProduct(id: string): Promise<Boolean> {
-        return await this.productRepository.deleteProduct(id);
+        try {
+            return await this.productRepository.deleteProduct(id);
+        } catch(error) {
+            throw new AppError("INTERNAL_SERVER_ERROR");
+        }
     }
 
     async updateProduct(id: string, productData: Partial<ICampaignProduct>): Promise<Boolean> {
