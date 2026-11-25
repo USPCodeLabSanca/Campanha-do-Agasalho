@@ -155,7 +155,7 @@ export function CollectionMap({
   }, [userLocation, t])
 
   return (
-    <div className="relative z-0 h-90 overflow-hidden rounded-3xl border border-blue-1/20 bg-white lg:h-full lg:min-h-115">
+    <div className="relative z-0 h-90 overflow-hidden rounded-3xl border border-blue-1/20 bg-white lg:h-130">
       <div
         ref={containerRef}
         className="size-full"

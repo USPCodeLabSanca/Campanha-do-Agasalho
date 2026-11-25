@@ -152,7 +152,7 @@ export function CollectionPointsSection() {
           </p>
         )}
 
-        <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+        <div className="grid gap-6 lg:grid-cols-2">
           <CollectionMap
             points={mappable}
             highlightedId={visibleHighlightedId}
@@ -160,7 +160,9 @@ export function CollectionPointsSection() {
             onSelect={highlight}
           />
 
-          <div className="flex min-h-0 flex-col gap-3">
+          {/* No computador, a coluna tem a mesma altura do mapa (h-130),
+              e a lista rola por dentro quando tem muitos pontos */}
+          <div className="flex min-h-0 flex-col gap-3 lg:h-130">
             <p className="text-strong text-blue-1" aria-live="polite">
               {loadStatus === 'ready' &&
                 t('collection.count', { count: filtered.length })}
@@ -181,7 +183,7 @@ export function CollectionPointsSection() {
             )}
 
             {loadStatus === 'ready' && filtered.length > 0 && (
-              <ul className="flex max-h-115 flex-col gap-4 overflow-y-auto pr-1 lg:max-h-130">
+              <ul className="flex max-h-115 scrollbar-pink flex-col gap-4 overflow-y-auto pr-2 lg:max-h-none lg:flex-1">
                 {filtered.map((point) => (
                   <CollectionPointCard
                     key={point.id}
