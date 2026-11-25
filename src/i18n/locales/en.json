@@ -479,5 +479,13 @@
     },
     "loading": "Loading collection points...",
     "loadError": "Could not load the collection points. Please try again later."
+  },
+  "carousel": {
+    "roleDescription": "carousel",
+    "slide": "photo",
+    "slideLabel": "{{current}} of {{total}}",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "goTo": "Go to photo {{number}}"
   }
 }
