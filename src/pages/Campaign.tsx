@@ -6,7 +6,7 @@ import { PageHero } from '../components/PageHero'
 import { CampaignValues } from '../components/campaign/CampaignValues'
 import { CampaignHistory } from '../components/campaign/CampaignHistory'
 import { CampaignHowItWorks } from '../components/campaign/CampaignHowItWorks'
-import { CampaignMemories } from '../components/campaign/CampaignCarousel'
+import { CampaignMemories } from '../components/campaign/CampaignMemories'
 
 import floqGroup from '../assets/images/floq_group.svg'
 
@@ -14,7 +14,6 @@ export function Campaign() {
   const { t } = useTranslation()
   const { hash } = useLocation()
 
-  // Rola até a seção quando o link tem #, ex.: /campanha#como-funciona
   useEffect(() => {
     if (hash) {
       document.querySelector(hash)?.scrollIntoView()
