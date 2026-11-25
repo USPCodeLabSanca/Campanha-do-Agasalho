@@ -19,6 +19,7 @@ import { AdminCollectionPoints } from './pages/admin/AdminCollectionPoints'
 import { AdminEntities } from './pages/admin/AdminEntities'
 import { AdminProducts } from './pages/admin/AdminProducts'
 import { AdminEditions } from './pages/admin/AdminEditions'
+import { AdminTimeline } from './pages/admin/AdminTimeline'
 
 export function AppRoutes() {
   return (
@@ -43,10 +44,7 @@ export function AppRoutes() {
         <Route path="entidades" element={<AdminEntities />} />
         <Route path="produtos" element={<AdminProducts />} />
         <Route path="edicoes" element={<AdminEditions />} />
-        <Route
-          path="linha-do-tempo"
-          element={<AdminComingSoon title="Linha do tempo" />}
-        />
+        <Route path="linha-do-tempo" element={<AdminTimeline />} />
         <Route
           path="contatos"
           element={<AdminComingSoon title="Contatos e redes" />}
