@@ -45,6 +45,23 @@
   --color-black: #00000c;
   --color-white: #fff;
   --color-background: #f6f6ff;
+
+  --animate-enter-from-right: enter-from-right 400ms ease-out;
+  --animate-enter-from-left: enter-from-left 400ms ease-out;
+
+  @keyframes enter-from-right {
+    from {
+      opacity: 0.5;
+      transform: translateX(10px);
+    }
+  }
+
+  @keyframes enter-from-left {
+    from {
+      opacity: 0.5;
+      transform: translateX(-10px);
+    }
+  }
 }
 
 @layer base {

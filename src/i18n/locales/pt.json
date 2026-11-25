@@ -172,6 +172,10 @@
           "description": "As entidades entregam às famílias que acompanham."
         }
       }
+    },
+    "carousel": {
+      "title": "Memórias da Campanha",
+      "description": "Confira algumas lembranças da Campanha em anos anteriores."
     }
   },
   "howToHelp": {
@@ -475,5 +479,13 @@
     },
     "loading": "Carregando pontos de coleta...",
     "loadError": "Não foi possível carregar os pontos de coleta. Tente novamente mais tarde."
+  },
+  "carousel": {
+    "roleDescription": "carrossel",
+    "slide": "foto",
+    "slideLabel": "{{current}} de {{total}}",
+    "previous": "Foto anterior",
+    "next": "Próxima foto",
+    "goTo": "Ir para a foto {{number}}"
   }
 }

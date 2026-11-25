@@ -172,6 +172,10 @@
           "description": "The organizations deliver the items to the families they support."
         }
       }
+    },
+    "carousel": {
+      "title": "Campaign memories",
+      "description": "Check out some memories from past years of the Campaign."
     }
   },
   "howToHelp": {
@@ -475,5 +479,13 @@
     },
     "loading": "Loading collection points...",
     "loadError": "Could not load the collection points. Please try again later."
+  },
+  "carousel": {
+    "roleDescription": "carousel",
+    "slide": "photo",
+    "slideLabel": "{{current}} of {{total}}",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "goTo": "Go to photo {{number}}"
   }
 }
