@@ -19,6 +19,7 @@ import type {
   CollectionPoint,
   CollectionPointInput,
 } from '../../types/collectionPoint'
+import { hasCoords } from '../../utils/collectionPoints'
 
 type Editing = CollectionPoint | 'new' | null
 
@@ -78,7 +79,8 @@ export function AdminCollectionPoints() {
   const visiblePoints = points.filter((point) => {
     if (onlyActive && !point.isActive) return false
 
-    const text = `${point.name} ${point.address}`.toLowerCase()
+    const text =
+      `${point.name} ${point.address} ${point.neighborhood ?? ''}`.toLowerCase()
     return text.includes(searchText)
   })
 
@@ -92,7 +94,7 @@ export function AdminCollectionPoints() {
 
       <div className="flex flex-wrap items-center gap-3">
         <AdminSearch
-          label="Buscar por nome ou endereço"
+          label="Buscar por nome, endereço ou bairro"
           value={search}
           onChange={setSearch}
         />
@@ -120,7 +122,14 @@ export function AdminCollectionPoints() {
             <AdminListItem
               key={point.id}
               title={point.name}
-              details={[point.address, point.hours].filter(Boolean).join(' · ')}
+              details={[
+                point.address,
+                point.neighborhood,
+                point.hours,
+                hasCoords(point) ? null : 'Sem localização no mapa',
+              ]
+                .filter(Boolean)
+                .join(' · ')}
               status={{
                 label: point.isActive ? 'No site' : 'Escondido',
                 isPositive: point.isActive,

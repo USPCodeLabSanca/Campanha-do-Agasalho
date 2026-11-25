@@ -458,5 +458,36 @@
       "instagram": "Seguir no Instagram",
       "help": "Ajudar de outra forma"
     }
+  },
+  "collection": {
+    "title": "Pontos de coleta",
+    "count_one": "{{count}} ponto de coleta",
+    "count_other": "{{count}} pontos de coleta",
+    "empty": "Nenhum ponto encontrado com esses filtros. Tente outro nome ou limpe os filtros.",
+    "filters": {
+      "searchLabel": "Buscar ponto de coleta",
+      "searchPlaceholder": "Ex: biblioteca, mercado, ICMC",
+      "neighborhoodLabel": "Bairro",
+      "allNeighborhoods": "Todos os bairros",
+      "clear": "Limpar filtros",
+      "nearest": "Ponto mais próximo",
+      "locating": "Localizando..."
+    },
+    "card": {
+      "distance": "{{km}} km de você",
+      "openMap": "Abrir no mapa",
+      "highlight": "Destacar no mapa"
+    },
+    "map": {
+      "label": "Mapa dos pontos de coleta",
+      "you": "Você está aqui"
+    },
+    "geoError": {
+      "unsupported": "Seu navegador não suporta geolocalização.",
+      "denied": "Permita o acesso à localização para encontrar o ponto mais próximo.",
+      "unavailable": "Não conseguimos descobrir sua localização. Tente novamente."
+    },
+    "loading": "Carregando pontos de coleta...",
+    "loadError": "Não foi possível carregar os pontos de coleta. Tente novamente mais tarde."
   }
 }

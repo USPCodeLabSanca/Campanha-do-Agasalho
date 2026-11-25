@@ -458,5 +458,36 @@
       "instagram": "Follow on Instagram",
       "help": "Help in other ways"
     }
+  },
+  "collection": {
+    "title": "Collection points",
+    "count_one": "{{count}} collection point",
+    "count_other": "{{count}} collection points",
+    "empty": "No points found with these filters. Try another name or clear the filters.",
+    "filters": {
+      "searchLabel": "Search collection point",
+      "searchPlaceholder": "E.g. library, market, ICMC",
+      "neighborhoodLabel": "Neighborhood",
+      "allNeighborhoods": "All neighborhoods",
+      "clear": "Clear filters",
+      "nearest": "Nearest point",
+      "locating": "Locating..."
+    },
+    "card": {
+      "distance": "{{km}} km away",
+      "openMap": "Open in maps",
+      "highlight": "Highlight on map"
+    },
+    "map": {
+      "label": "Collection points map",
+      "you": "You are here"
+    },
+    "geoError": {
+      "unsupported": "Your browser does not support geolocation.",
+      "denied": "Allow location access to find the nearest point.",
+      "unavailable": "We could not determine your location. Please try again."
+    },
+    "loading": "Loading collection points...",
+    "loadError": "Could not load the collection points. Please try again later."
   }
 }
