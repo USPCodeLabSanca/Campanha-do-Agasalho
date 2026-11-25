@@ -137,34 +137,7 @@
       }
     },
     "history": {
-      "title": "Our story",
-      "milestones": {
-        "first": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "second": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "third": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "fourth": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "fifth": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        }
-      }
+      "title": "Our story"
     },
     "howItWorks": {
       "title": "How it works",
@@ -199,6 +172,10 @@
           "description": "The organizations deliver the items to the families they support."
         }
       }
+    },
+    "carousel": {
+      "title": "Campaign memories",
+      "description": "Check out some memories from past years of the Campaign."
     }
   },
   "howToHelp": {
@@ -451,6 +428,64 @@
     "hero": {
       "title": "Join the drive!",
       "description": "Five teams take care of everything, from the collection box to the Instagram post. Find out where you fit in."
+    },
+    "nuclei": {
+      "title": "The five teams"
+    },
+    "selection": {
+      "title": "Join the team",
+      "instagram": "Follow on Instagram",
+      "help": "Help in other ways",
+      "closed": {
+        "badge": "Applications closed",
+        "heading": "Applications are not open right now"
+      },
+      "open": {
+        "badge": "Applications open",
+        "heading": "Applications are open!",
+        "deadline": "Applications until {{date}}",
+        "apply": "Apply now",
+        "newTab": "(opens in a new tab)"
+      }
     }
+  },
+  "collection": {
+    "title": "Collection points",
+    "count_one": "{{count}} collection point",
+    "count_other": "{{count}} collection points",
+    "empty": "No points found with these filters. Try another name or clear the filters.",
+    "filters": {
+      "searchLabel": "Search collection point",
+      "searchPlaceholder": "E.g. library, market, ICMC",
+      "neighborhoodLabel": "Neighborhood",
+      "allNeighborhoods": "All neighborhoods",
+      "clear": "Clear filters",
+      "nearest": "Nearest point",
+      "locating": "Locating..."
+    },
+    "card": {
+      "distance": "{{km}} km away",
+      "openMap": "Open in maps",
+      "highlight": "Highlight on map"
+    },
+    "map": {
+      "label": "Collection points map",
+      "you": "You are here"
+    },
+    "geoError": {
+      "unsupported": "Your browser does not support geolocation.",
+      "denied": "Allow location access to find the nearest point.",
+      "unavailable": "We could not determine your location. Please try again."
+    },
+    "loading": "Loading collection points...",
+    "loadError": "Could not load the collection points. Please try again later."
+  },
+  "carousel": {
+    "roleDescription": "carousel",
+    "slide": "photo",
+    "slideLabel": "{{current}} of {{total}}",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "goTo": "Go to photo {{number}}"
   }
 }

@@ -45,6 +45,23 @@
   --color-black: #00000c;
   --color-white: #fff;
   --color-background: #f6f6ff;
+
+  --animate-enter-from-right: enter-from-right 400ms ease-out;
+  --animate-enter-from-left: enter-from-left 400ms ease-out;
+
+  @keyframes enter-from-right {
+    from {
+      opacity: 0.5;
+      transform: translateX(10px);
+    }
+  }
+
+  @keyframes enter-from-left {
+    from {
+      opacity: 0.5;
+      transform: translateX(-10px);
+    }
+  }
 }
 
 @layer base {
@@ -158,4 +175,23 @@
 
 @utility card {
   @apply rounded-2xl border border-orange-2/40 bg-white;
+}
+
+/* Barra de rolagem fininha e rosa, para listas que rolam por dentro */
+@utility scrollbar-pink {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-pink-2) transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: var(--color-pink-2);
+  }
 }

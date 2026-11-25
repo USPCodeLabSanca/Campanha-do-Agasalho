@@ -2,31 +2,22 @@ import { useTranslation } from 'react-i18next'
 
 import { TextLink } from '../TextLink'
 
-const options = [
-  {
-    key: 'donate',
-    to: '/pontos-coleta',
-  },
-  {
-    key: 'shop',
-    to: '/lojinha',
-  },
-  {
-    key: 'raffles',
-    to: 'https://www.instagram.com/instagasalho',
-  },
-  {
-    key: 'partner',
-    to: 'mailto:campanha.agasalho@usp.br',
-  },
-  {
-    key: 'volunteer',
-    to: '/participe',
-  },
-] as const
+import { useContacts } from '../../hooks/useContacts'
 
 export function HowToHelpOptions() {
   const { t } = useTranslation()
+  const contacts = useContacts()
+
+  const options = [
+    { key: 'donate', to: '/pontos-coleta' },
+    { key: 'shop', to: '/lojinha' },
+    { key: 'raffles', to: contacts?.instagram },
+    {
+      key: 'partner',
+      to: contacts?.email ? `mailto:${contacts.email}` : undefined,
+    },
+    { key: 'volunteer', to: '/participe' },
+  ] as const
 
   return (
     <section className="section-spacing" aria-labelledby="help-options-title">
@@ -49,11 +40,14 @@ export function HowToHelpOptions() {
               <p className="mt-2 text-body">
                 {t(`howToHelp.options.${option.key}.description`)}
               </p>
-              <div className="mt-auto pt-6">
-                <TextLink to={option.to}>
-                  {t(`howToHelp.options.${option.key}.link`)}
-                </TextLink>
-              </div>
+              {/* Sem link (contato vazio ou ainda carregando), o card fica sem o link */}
+              {option.to && (
+                <div className="mt-auto pt-6">
+                  <TextLink to={option.to}>
+                    {t(`howToHelp.options.${option.key}.link`)}
+                  </TextLink>
+                </div>
+              )}
             </li>
           ))}
         </ul>

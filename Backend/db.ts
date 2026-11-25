@@ -3,6 +3,7 @@ import type { IUser } from "./interfaces/IUser.js"
 import type { IYear } from "./interfaces/IYear.js";
 import type { IEntity } from "./interfaces/IEntity.js";
 import type { ICampaignProduct } from "./interfaces/IProduct.js";
+import type { ICollectPoint } from "./interfaces/ICollect.js";
 
 const uri: string = process.env.MONGODB_URI || "";
 if (!uri) {
@@ -15,6 +16,7 @@ export let userCollection: Collection<IUser>;
 export let yearCollection: Collection<IYear>
 export let entityCollection: Collection<IEntity>
 export let productCollection: Collection<ICampaignProduct>
+export let collectCollection: Collection<ICollectPoint>
 /* ^^ Caso haja necessidade de mais tabelas/collection, colocar aqui ^^ */
 // Ex:
 // export let testCollection: Collection<ITeste>;
@@ -33,6 +35,7 @@ export async function connectDb(): Promise<Db> {
     yearCollection = db.collection<IYear>("year");
     entityCollection = db.collection<IEntity>("entity");
     productCollection = db.collection<ICampaignProduct>("product");
+    collectCollection = db.collection<ICollectPoint>("collect");
     /* ^^ Caso haja necessidade de mais tabelas/collection, colocar aqui ^^ */
     // Ex:
     // testCollection = db.collection<ITeste>('test')

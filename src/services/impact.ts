@@ -1,6 +1,6 @@
 import type { Edition } from '../types/edition'
 
-const mockEditions: Edition[] = [
+let mockEditions: Edition[] = [
   {
     year: 2020,
     totalCollected: 210000,
@@ -104,4 +104,31 @@ const mockEditions: Edition[] = [
 
 export async function getEditions(): Promise<Edition[]> {
   return mockEditions
+}
+
+// Só uma edição pode estar em andamento.
+// Se a edição salva estiver, todas as outras deixam de estar.
+function clearOtherOngoing(list: Edition[], edition: Edition) {
+  if (!edition.isOngoing) return list
+
+  return list.map((item) => ({ ...item, isOngoing: false }))
+}
+
+export async function createEdition(edition: Edition): Promise<void> {
+  mockEditions = [...clearOtherOngoing(mockEditions, edition), edition]
+}
+
+// As edições não têm id: o ano é o que identifica cada uma.
+// Por isso o ano original é usado para achar a edição, caso ele tenha sido mudado.
+export async function updateEdition(
+  originalYear: number,
+  edition: Edition,
+): Promise<void> {
+  mockEditions = clearOtherOngoing(mockEditions, edition).map((item) =>
+    item.year === originalYear ? edition : item,
+  )
+}
+
+export async function deleteEdition(year: number): Promise<void> {
+  mockEditions = mockEditions.filter((item) => item.year !== year)
 }

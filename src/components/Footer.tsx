@@ -9,35 +9,29 @@ import {
 } from '@phosphor-icons/react'
 
 import { pages } from '../constants/pages'
+import { useContacts } from '../hooks/useContacts'
 
 import logo from '../assets/images/logo.svg'
 import logoCodeLab from '../assets/images/logo_codelab.svg'
 
-const socialLinks = [
+const socialNetworks = [
   {
+    key: 'instagram',
     labelKey: 'footer.navInstagram',
     icon: InstagramLogoIcon,
-    url: 'https://www.instagram.com/instagasalho',
   },
-  {
-    labelKey: 'footer.navTiktok',
-    icon: TiktokLogoIcon,
-    url: 'https://www.tiktok.com/@campanhagasalho',
-  },
-  {
-    labelKey: 'footer.navFacebook',
-    icon: FacebookLogoIcon,
-    url: 'https://www.facebook.com/campanhadoagasalhouspsc/',
-  },
-  {
-    labelKey: 'footer.navLinkedin',
-    icon: LinkedinLogoIcon,
-    url: 'https://www.linkedin.com/company/campanha-usp-do-agasalho-oficial/',
-  },
+  { key: 'tiktok', labelKey: 'footer.navTiktok', icon: TiktokLogoIcon },
+  { key: 'facebook', labelKey: 'footer.navFacebook', icon: FacebookLogoIcon },
+  { key: 'linkedin', labelKey: 'footer.navLinkedin', icon: LinkedinLogoIcon },
 ] as const
 
 export function Footer() {
   const { t } = useTranslation()
+  const contacts = useContacts()
+
+  const socialLinks = contacts
+    ? socialNetworks.filter((social) => contacts[social.key])
+    : []
 
   return (
     <footer className="w-full bg-blue-1">
@@ -65,19 +59,21 @@ export function Footer() {
         <nav aria-label={t('footer.contact')}>
           <div className="flex flex-col gap-5 text-white">
             <p className="text-button text-orange-1">{t('footer.contact')}</p>
-            <a
-              href="mailto:campanha.agasalho@usp.br"
-              className="transition hover:text-orange-1"
-            >
-              campanha.agasalho@usp.br
-            </a>
+            {contacts?.email && (
+              <a
+                href={`mailto:${contacts.email}`}
+                className="transition hover:text-orange-1"
+              >
+                {contacts.email}
+              </a>
+            )}
             <ul className="flex gap-5">
               {socialLinks.map((social) => {
                 const CurrentIcon = social.icon
                 return (
-                  <li key={social.labelKey}>
+                  <li key={social.key}>
                     <a
-                      href={social.url}
+                      href={contacts?.[social.key]}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={t(social.labelKey)}

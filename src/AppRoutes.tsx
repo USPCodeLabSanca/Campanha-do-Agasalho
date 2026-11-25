@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router'
 
 import { SiteLayout } from './layouts/SiteLayout'
+import { AdminLayout } from './layouts/AdminLayout'
 
 import { Home } from './pages/Home'
 import { Campaign } from './pages/Campaign'
@@ -13,6 +14,13 @@ import { Shop } from './pages/Shop'
 import { NotFound } from './pages/NotFound'
 import { AdminLogin } from './pages/admin/AdminLogin'
 import { AdminHome } from './pages/admin/AdminHome'
+import { AdminCollectionPoints } from './pages/admin/AdminCollectionPoints'
+import { AdminEntities } from './pages/admin/AdminEntities'
+import { AdminProducts } from './pages/admin/AdminProducts'
+import { AdminEditions } from './pages/admin/AdminEditions'
+import { AdminTimeline } from './pages/admin/AdminTimeline'
+import { AdminContacts } from './pages/admin/AdminContacts'
+import { AdminParticipate } from './pages/admin/AdminParticipate'
 
 export function AppRoutes() {
   return (
@@ -29,8 +37,18 @@ export function AppRoutes() {
         <Route path="/*" element={<NotFound />} />
       </Route>
 
-      <Route path="/admin" element={<AdminHome />} />
       <Route path="/admin/login" element={<AdminLogin />} />
+
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<AdminHome />} />
+        <Route path="pontos-de-coleta" element={<AdminCollectionPoints />} />
+        <Route path="entidades" element={<AdminEntities />} />
+        <Route path="produtos" element={<AdminProducts />} />
+        <Route path="edicoes" element={<AdminEditions />} />
+        <Route path="linha-do-tempo" element={<AdminTimeline />} />
+        <Route path="contatos" element={<AdminContacts />} />
+        <Route path="participe" element={<AdminParticipate />} />
+      </Route>
     </Routes>
   )
 }

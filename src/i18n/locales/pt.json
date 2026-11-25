@@ -137,34 +137,7 @@
       }
     },
     "history": {
-      "title": "Nossa história",
-      "milestones": {
-        "first": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "second": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "third": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "fourth": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "fifth": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        }
-      }
+      "title": "Nossa história"
     },
     "howItWorks": {
       "title": "Como funciona",
@@ -199,6 +172,10 @@
           "description": "As entidades entregam às famílias que acompanham."
         }
       }
+    },
+    "carousel": {
+      "title": "Memórias da Campanha",
+      "description": "Confira algumas lembranças da Campanha em anos anteriores."
     }
   },
   "howToHelp": {
@@ -451,6 +428,64 @@
     "hero": {
       "title": "Faça parte da campanha!",
       "description": "Cinco núcleos cuidam de tudo: da caixa de coleta ao post no Instagram. Descubra onde o seu jeito se encaixa."
+    },
+    "nuclei": {
+      "title": "Os cinco núcleos"
+    },
+    "selection": {
+      "title": "Faça parte da equipe",
+      "instagram": "Seguir no Instagram",
+      "help": "Ajudar de outra forma",
+      "closed": {
+        "badge": "Inscrições fechadas",
+        "heading": "As inscrições não estão abertas no momento"
+      },
+      "open": {
+        "badge": "Inscrições abertas",
+        "heading": "As inscrições estão abertas!",
+        "deadline": "Inscrições até {{date}}",
+        "apply": "Fazer inscrição",
+        "newTab": "(abre em uma nova aba)"
+      }
     }
+  },
+  "collection": {
+    "title": "Pontos de coleta",
+    "count_one": "{{count}} ponto de coleta",
+    "count_other": "{{count}} pontos de coleta",
+    "empty": "Nenhum ponto encontrado com esses filtros. Tente outro nome ou limpe os filtros.",
+    "filters": {
+      "searchLabel": "Buscar ponto de coleta",
+      "searchPlaceholder": "Ex: biblioteca, mercado, ICMC",
+      "neighborhoodLabel": "Bairro",
+      "allNeighborhoods": "Todos os bairros",
+      "clear": "Limpar filtros",
+      "nearest": "Ponto mais próximo",
+      "locating": "Localizando..."
+    },
+    "card": {
+      "distance": "{{km}} km de você",
+      "openMap": "Abrir no mapa",
+      "highlight": "Destacar no mapa"
+    },
+    "map": {
+      "label": "Mapa dos pontos de coleta",
+      "you": "Você está aqui"
+    },
+    "geoError": {
+      "unsupported": "Seu navegador não suporta geolocalização.",
+      "denied": "Permita o acesso à localização para encontrar o ponto mais próximo.",
+      "unavailable": "Não conseguimos descobrir sua localização. Tente novamente."
+    },
+    "loading": "Carregando pontos de coleta...",
+    "loadError": "Não foi possível carregar os pontos de coleta. Tente novamente mais tarde."
+  },
+  "carousel": {
+    "roleDescription": "carrossel",
+    "slide": "foto",
+    "slideLabel": "{{current}} de {{total}}",
+    "previous": "Foto anterior",
+    "next": "Próxima foto",
+    "goTo": "Ir para a foto {{number}}"
   }
 }
