@@ -7,7 +7,7 @@ type TextFieldProps = {
   help?: string
   required?: boolean
   multiline?: boolean
-  type?: 'text' | 'number' | 'email' | 'url' | 'tel'
+  type?: 'text' | 'number' | 'email' | 'url' | 'tel' | 'date'
   step?: number
   min?: number
   max?: number

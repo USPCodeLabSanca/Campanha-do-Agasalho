@@ -60,9 +60,14 @@ let mockNuclei: Nucleus[] = [
 let mockSelectionProcess: SelectionProcess = {
   isOpen: false,
   formUrl: '',
+  deadline: '',
+  openMessage: {
+    pt: 'Quer ajudar a aquecer mais gente neste inverno? Preencha o formulário e venha fazer parte da campanha.',
+    en: 'Want to help keep more people warm this winter? Fill out the form and join the campaign.',
+  },
   closedMessage: {
-    pt: 'As vagas abrem uma vez por início de cada semestre. Acompanhe o Instagram da campanha para saber da próxima chamada — e, enquanto isso, você pode ajudar doando.',
-    en: 'Spots open once at the start of each semester. Follow the campaign on Instagram to hear about the next call — and in the meantime you can help by donating.',
+    pt: 'As inscrições abrem no início de cada semestre. Acompanhe o Instagram da campanha para saber da próxima chamada — e, enquanto isso, você pode ajudar doando.',
+    en: 'Applications open at the start of each semester. Follow the campaign on Instagram to hear about the next call — and in the meantime you can help by donating.',
   },
 }
 
