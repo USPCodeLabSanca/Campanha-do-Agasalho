@@ -36,11 +36,12 @@ export function BilingualField({
       <div className="grid gap-3 sm:grid-cols-2">
         {languages.map((language) => {
           const fieldId = `${id}-${language.code}`
+          const isPortuguese = language.code === 'pt'
 
           const fieldProps = {
             id: fieldId,
             value: value[language.code],
-            required,
+            required: required && isPortuguese,
             className: inputClasses,
           }
 
@@ -52,6 +53,7 @@ export function BilingualField({
             <div key={language.code} className="flex flex-col gap-1">
               <label htmlFor={fieldId} className="text-small">
                 {language.label}
+                {required && !isPortuguese && ' (opcional)'}
               </label>
 
               {multiline ? (
