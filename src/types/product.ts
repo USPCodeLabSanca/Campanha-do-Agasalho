@@ -1,3 +1,5 @@
+import type { TranslatedText } from './translatedText'
+
 export type ProductCategory = 'clothes' | 'mugs' | 'accessories'
 
 export type SizeMeasurement = {
@@ -11,9 +13,11 @@ export type Product = {
   name: string
   category: ProductCategory
   price: number
-  description: string
+  description: TranslatedText
   image?: string
   sizes?: string[]
   sizeGuide?: SizeMeasurement[]
   isSoldOut?: boolean
 }
+
+export type ProductInput = Omit<Product, 'id'>
