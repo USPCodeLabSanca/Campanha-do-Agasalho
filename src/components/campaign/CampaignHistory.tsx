@@ -1,37 +1,21 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
+import { getMilestones } from '../../services/timeline'
+import type { Milestone } from '../../types/milestone'
+import { getTranslatedText } from '../../utils/getTranslatedText'
+import { sortMilestones } from '../../utils/sortMilestones'
 
 import floqParty from '../../assets/images/floq_party.svg'
 
-const milestones = [
-  {
-    yearKey: 'campaign.history.milestones.first.year',
-    titleKey: 'campaign.history.milestones.first.title',
-    descriptionKey: 'campaign.history.milestones.first.description',
-  },
-  {
-    yearKey: 'campaign.history.milestones.second.year',
-    titleKey: 'campaign.history.milestones.second.title',
-    descriptionKey: 'campaign.history.milestones.second.description',
-  },
-  {
-    yearKey: 'campaign.history.milestones.third.year',
-    titleKey: 'campaign.history.milestones.third.title',
-    descriptionKey: 'campaign.history.milestones.third.description',
-  },
-  {
-    yearKey: 'campaign.history.milestones.fourth.year',
-    titleKey: 'campaign.history.milestones.fourth.title',
-    descriptionKey: 'campaign.history.milestones.fourth.description',
-  },
-  {
-    yearKey: 'campaign.history.milestones.fifth.year',
-    titleKey: 'campaign.history.milestones.fifth.title',
-    descriptionKey: 'campaign.history.milestones.fifth.description',
-  },
-] as const
-
 export function CampaignHistory() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const [milestones, setMilestones] = useState<Milestone[]>([])
+  const language = i18n.resolvedLanguage
+
+  useEffect(() => {
+    getMilestones().then((data) => setMilestones(sortMilestones(data)))
+  }, [])
 
   return (
     <section
@@ -54,7 +38,7 @@ export function CampaignHistory() {
             />
             <ol role="list" className="relative flex flex-col gap-8">
               {milestones.map((milestone) => (
-                <li key={milestone.titleKey} className="flex items-start gap-6">
+                <li key={milestone.id} className="flex items-start gap-6">
                   <span
                     aria-hidden="true"
                     className="mt-1.5 size-4 shrink-0 rounded-full bg-orange-1"
@@ -62,12 +46,14 @@ export function CampaignHistory() {
                   <div>
                     <div className="flex items-baseline gap-3">
                       <span className="text-h4 text-orange-1">
-                        {t(milestone.yearKey)}
+                        {milestone.year}
                       </span>
-                      <h3 className="text-h4">{t(milestone.titleKey)}</h3>
+                      <h3 className="text-h4">
+                        {getTranslatedText(milestone.title, language)}
+                      </h3>
                     </div>
                     <p className="mt-1 text-body">
-                      {t(milestone.descriptionKey)}
+                      {getTranslatedText(milestone.description, language)}
                     </p>
                   </div>
                 </li>
