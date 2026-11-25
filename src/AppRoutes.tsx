@@ -20,6 +20,7 @@ import { AdminProducts } from './pages/admin/AdminProducts'
 import { AdminEditions } from './pages/admin/AdminEditions'
 import { AdminTimeline } from './pages/admin/AdminTimeline'
 import { AdminContacts } from './pages/admin/AdminContacts'
+import { AdminParticipate } from './pages/admin/AdminParticipate'
 
 export function AppRoutes() {
   return (
@@ -46,6 +47,7 @@ export function AppRoutes() {
         <Route path="edicoes" element={<AdminEditions />} />
         <Route path="linha-do-tempo" element={<AdminTimeline />} />
         <Route path="contatos" element={<AdminContacts />} />
+        <Route path="participe" element={<AdminParticipate />} />
       </Route>
     </Routes>
   )
