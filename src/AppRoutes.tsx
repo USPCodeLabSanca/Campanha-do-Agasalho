@@ -14,12 +14,12 @@ import { Shop } from './pages/Shop'
 import { NotFound } from './pages/NotFound'
 import { AdminLogin } from './pages/admin/AdminLogin'
 import { AdminHome } from './pages/admin/AdminHome'
-import { AdminComingSoon } from './pages/admin/AdminComingSoon'
 import { AdminCollectionPoints } from './pages/admin/AdminCollectionPoints'
 import { AdminEntities } from './pages/admin/AdminEntities'
 import { AdminProducts } from './pages/admin/AdminProducts'
 import { AdminEditions } from './pages/admin/AdminEditions'
 import { AdminTimeline } from './pages/admin/AdminTimeline'
+import { AdminContacts } from './pages/admin/AdminContacts'
 
 export function AppRoutes() {
   return (
@@ -45,10 +45,7 @@ export function AppRoutes() {
         <Route path="produtos" element={<AdminProducts />} />
         <Route path="edicoes" element={<AdminEditions />} />
         <Route path="linha-do-tempo" element={<AdminTimeline />} />
-        <Route
-          path="contatos"
-          element={<AdminComingSoon title="Contatos e redes" />}
-        />
+        <Route path="contatos" element={<AdminContacts />} />
       </Route>
     </Routes>
   )

@@ -7,10 +7,11 @@ type TextFieldProps = {
   help?: string
   required?: boolean
   multiline?: boolean
-  type?: 'text' | 'number'
+  type?: 'text' | 'number' | 'email' | 'url' | 'tel'
   step?: number
   min?: number
   max?: number
+  pattern?: string
 }
 
 export const inputClasses =
@@ -27,6 +28,7 @@ export function TextField({
   step,
   min = 0,
   max,
+  pattern,
 }: TextFieldProps) {
   const id = useId()
   const helpId = `${id}-help`
@@ -59,6 +61,7 @@ export function TextField({
           min={type === 'number' ? min : undefined}
           max={type === 'number' ? max : undefined}
           step={step}
+          pattern={pattern}
           onChange={(event) => onChange(event.target.value)}
         />
       )}
