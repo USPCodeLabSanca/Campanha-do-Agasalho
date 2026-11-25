@@ -27,7 +27,7 @@ function pinIcon(active: boolean) {
 
 const userIcon = L.divIcon({
   className: '',
-  html: '<div class="size-full rounded-full border-2 border-white bg-blue-500 shadow-md ring-4 ring-blue-500/30"></div>',
+  html: '<div class="size-full rounded-full border-2 border-white bg-blue-5 shadow-md ring-4 ring-blue-5/30"></div>',
   iconSize: [16, 16],
   iconAnchor: [8, 8],
 })
@@ -45,10 +45,12 @@ export function CollectionMap({
   const markersRef = useRef<Map<string, L.Marker>>(new Map())
   const userMarkerRef = useRef<L.Marker | null>(null)
   const onSelectRef = useRef(onSelect)
+  const highlightedIdRef = useRef(highlightedId)
 
   useEffect(() => {
     onSelectRef.current = onSelect
-  }, [onSelect])
+    highlightedIdRef.current = highlightedId
+  }, [onSelect, highlightedId])
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -56,7 +58,7 @@ export function CollectionMap({
     const map = L.map(containerRef.current, {
       center: DEFAULT_CENTER,
       zoom: 13,
-      scrollWheelZoom: false, 
+      scrollWheelZoom: false,
     })
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -113,13 +115,11 @@ export function CollectionMap({
       markers.set(point.id, marker)
     })
 
-    if (points.length > 0 && !highlightedId) {
+    if (points.length > 0 && !highlightedIdRef.current) {
       const bounds = L.latLngBounds(points.map((p) => [p.lat, p.lng]))
       map.fitBounds(bounds, { padding: [48, 48], maxZoom: 16 })
     }
-
   }, [points])
-
 
   useEffect(() => {
     const map = mapRef.current
@@ -155,7 +155,7 @@ export function CollectionMap({
   }, [userLocation, t])
 
   return (
-    <div className="relative z-0 h-[360px] overflow-hidden rounded-3xl border border-blue-1/20 bg-white lg:h-full lg:min-h-[460px]">
+    <div className="relative z-0 h-90 overflow-hidden rounded-3xl border border-blue-1/20 bg-white lg:h-full lg:min-h-115">
       <div
         ref={containerRef}
         className="size-full"

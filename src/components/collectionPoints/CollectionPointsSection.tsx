@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCollectionPoints } from '../../services/collectionPoints'
-import {
-  hasCoords,
-  type CollectionPoint,
-  type LatLng,
-  type MappablePoint,
+import type {
+  CollectionPoint,
+  LatLng,
+  MappablePoint,
 } from '../../types/collectionPoint'
 import {
   distanceKm,
   findNearest,
+  hasCoords,
   normalize,
 } from '../../utils/collectionPoints'
 import { CollectionFilters } from './CollectionFilters'
@@ -74,11 +74,9 @@ export function CollectionPointsSection() {
 
   const mappable = useMemo(() => filtered.filter(hasCoords), [filtered])
 
-  useEffect(() => {
-    if (highlightedId && !filtered.some((p) => p.id === highlightedId)) {
-      setHighlightedId(null)
-    }
-  }, [filtered, highlightedId])
+  const visibleHighlightedId = filtered.some((p) => p.id === highlightedId)
+    ? highlightedId
+    : null
 
   const highlight = useCallback((id: string) => {
     setHighlightedId(id)
@@ -128,8 +126,15 @@ export function CollectionPointsSection() {
   }
 
   return (
-    <section className="bg-[#f5f6ff] px-5 py-10 md:px-20 md:py-14">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8">
+    <section
+      className="bg-background section-spacing"
+      aria-labelledby="collection-points-title"
+    >
+      <div className="page-container flex flex-col gap-8">
+        <h2 id="collection-points-title" className="sr-only">
+          {t('collection.title')}
+        </h2>
+
         <CollectionFilters
           search={search}
           neighborhood={neighborhood}
@@ -142,7 +147,7 @@ export function CollectionPointsSection() {
         />
 
         {geoError && (
-          <p role="alert" className="text-sm font-semibold text-pink-1">
+          <p role="alert" className="text-strong text-pink-1">
             {t(`collection.geoError.${geoError}`)}
           </p>
         )}
@@ -150,33 +155,33 @@ export function CollectionPointsSection() {
         <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
           <CollectionMap
             points={mappable}
-            highlightedId={highlightedId}
+            highlightedId={visibleHighlightedId}
             userLocation={userLocation}
             onSelect={highlight}
           />
 
           <div className="flex min-h-0 flex-col gap-3">
-            <p className="text-sm font-semibold text-blue-1" aria-live="polite">
+            <p className="text-strong text-blue-1" aria-live="polite">
               {loadStatus === 'ready' &&
                 t('collection.count', { count: filtered.length })}
             </p>
 
             {loadStatus === 'loading' && (
-              <p className="text-blue-1">{t('collection.loading')}</p>
+              <p className="text-body">{t('collection.loading')}</p>
             )}
             {loadStatus === 'error' && (
-              <p role="alert" className="text-pink-1">
+              <p role="alert" className="text-body text-pink-1">
                 {t('collection.loadError')}
               </p>
             )}
             {loadStatus === 'ready' && filtered.length === 0 && (
-              <p className="rounded-2xl border border-blue-1/20 bg-white p-6 text-blue-1">
+              <p className="rounded-2xl border border-blue-1/20 bg-white p-6 text-body">
                 {t('collection.empty')}
               </p>
             )}
 
             {loadStatus === 'ready' && filtered.length > 0 && (
-              <ul className="flex max-h-[460px] flex-col gap-4 overflow-y-auto pr-1 lg:max-h-[520px]">
+              <ul className="flex max-h-115 flex-col gap-4 overflow-y-auto pr-1 lg:max-h-130">
                 {filtered.map((point) => (
                   <CollectionPointCard
                     key={point.id}
@@ -185,7 +190,7 @@ export function CollectionPointsSection() {
                       else cardRefs.current.delete(point.id)
                     }}
                     point={point}
-                    highlighted={point.id === highlightedId}
+                    highlighted={point.id === visibleHighlightedId}
                     canHighlight={hasCoords(point)}
                     distanceKm={
                       userLocation && hasCoords(point)
