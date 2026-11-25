@@ -424,6 +424,39 @@
     "hero": {
       "title": "Faça parte da campanha!",
       "description": "Cinco núcleos cuidam de tudo: da caixa de coleta ao post no Instagram. Descubra onde o seu jeito se encaixa."
+    },
+    "nuclei": {
+      "title": "Os cinco núcleos",
+      "items": {
+        "general": {
+          "title": "Gerais",
+          "description": "Coordena a campanha, conecta os núcleos e acompanha metas e prazos da edição."
+        },
+        "outreach": {
+          "title": "Divulgação",
+          "description": "Cria posts, artes, conteúdos para o Instagram e estratégias para alcançarmos cada vez mais pessoas."
+        },
+        "organizations": {
+          "title": "Entidades",
+          "description": "Faz a ponte com as entidades da USP e organiza a participação delas na campanha."
+        },
+        "external": {
+          "title": "Relações externas",
+          "description": "Gerencia os recursos e constrói parcerias com patrocinadores que tornam o projeto possível."
+        },
+        "infrastructure": {
+          "title": "Infraestrutura",
+          "description": "Cuida da arrecadação, administra as caixas de doação e planeja os grandes eventos."
+        }
+      }
+    },
+    "selection": {
+      "title": "Processo seletivo",
+      "badge": "Inscrições fechadas",
+      "heading": "O processo seletivo não está aberto no momento",
+      "description": "As vagas abrem uma vez por início de cada semestre. Acompanhe o Instagram da campanha para saber da próxima chamada — e, enquanto isso, você pode ajudar doando.",
+      "instagram": "Seguir no Instagram",
+      "help": "Ajudar de outra forma"
     }
   }
 }

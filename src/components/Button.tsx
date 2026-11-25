@@ -11,6 +11,7 @@ type ButtonProps = {
   size?: ButtonSize
   rightIcon?: React.ReactNode
   to?: string
+  href?: string
   onClick?: () => void
   disabled?: boolean
   type?: 'button' | 'submit'
@@ -41,6 +42,7 @@ export function Button({
   size = 'default',
   rightIcon,
   to,
+  href,
   onClick,
   disabled,
   type = 'button',
@@ -63,6 +65,19 @@ export function Button({
       <Link to={to} className={classes} onClick={onClick}>
         {content}
       </Link>
+    )
+  }
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        onClick={onClick}
+      >
+        {content}
+      </a>
     )
   }
 
