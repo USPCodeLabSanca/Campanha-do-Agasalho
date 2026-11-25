@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
 
 import { AdminPageHeader } from '../../components/admin/AdminPageHeader'
 import { AdminListItem } from '../../components/admin/AdminListItem'
@@ -20,7 +21,10 @@ type Editing = Milestone | 'new' | null
 export function AdminTimeline() {
   const [milestones, setMilestones] = useState<Milestone[]>([])
   const [isLoading, setIsLoading] = useState(true)
-  const [editing, setEditing] = useState<Editing>(null)
+  const location = useLocation()
+  const [editing, setEditing] = useState<Editing>(
+    location.state?.openNewForm ? 'new' : null,
+  )
   const [isSaving, setIsSaving] = useState(false)
   const [deleting, setDeleting] = useState<Milestone | null>(null)
   const [toast, setToast] = useState<string | null>(null)

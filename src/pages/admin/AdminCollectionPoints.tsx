@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
 
 import { AdminPageHeader } from '../../components/admin/AdminPageHeader'
 import { AdminSearch } from '../../components/admin/AdminSearch'
@@ -26,7 +27,10 @@ export function AdminCollectionPoints() {
   const [isLoading, setIsLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [onlyActive, setOnlyActive] = useState(false)
-  const [editing, setEditing] = useState<Editing>(null)
+  const location = useLocation()
+  const [editing, setEditing] = useState<Editing>(
+    location.state?.openNewForm ? 'new' : null,
+  )
   const [isSaving, setIsSaving] = useState(false)
   const [deleting, setDeleting] = useState<CollectionPoint | null>(null)
   const [toast, setToast] = useState<string | null>(null)
