@@ -1,27 +1,31 @@
 import "dotenv/config"
 import express from "express"
 import type { Server } from "node:http"
-import { connectDb, entityCollection, userCollection, yearCollection } from "./db.js"
+import { collectCollection, connectDb, entityCollection, userCollection, yearCollection } from "./db.js"
 
 // Repositorys
 import { UserRepository } from "./repository/UserRepository.js"
 import { YearRepository } from "./repository/YearRepository.js"
 import { EntityRepository } from "./repository/EntityRepository.js"
+import { CollectRepository } from "./repository/CollectRepository.js"
 
 // Services
 import { UserService } from "./services/UserService.js"
 import { YearService } from "./services/YearService.js"
 import { EntityService } from "./services/EntityService.js"
+import { CollectService } from "./services/CollectService.js"
 
 // Controllers
 import { UserController } from "./controllers/UserController.js"
 import { YearController } from "./controllers/YearController.js"
 import { EntityController } from "./controllers/EntityController.js"
+import { CollectController } from "./controllers/CollectController.js"
 
 // Routers
 import { createUserRouter } from "./routes/UserRouter.js"
 import { createYearRouter } from "./routes/YearRouter.js"
 import { createEntityRouter } from "./routes/EntityRouter.js"
+import { createCollectRouter } from "./routes/CollectRouter.js"
 
 // Declaração do objeto de roteamento
 const app = express();
@@ -47,6 +51,10 @@ async function initServer(): Promise<void> {
         const entityRepository = new EntityRepository(entityCollection);
         const entityService = new EntityService(entityRepository);
         const entityController = new EntityController(entityService);
+
+        const collectRepository = new CollectRepository(collectCollection);
+        const collectService = new CollectService(collectRepository);
+        const collectController = new CollectController(collectService);
         /* ^^ Caso haja necessidade de mais categorias, colocar aqui ^^ */
         // Ex:
         // const testRepository = db.collection<ITeste>('test')
@@ -56,6 +64,7 @@ async function initServer(): Promise<void> {
         app.use("/user", createUserRouter(userController));
         app.use("/year", createYearRouter(yearController));
         app.use("/entity", createEntityRouter(entityController));
+        app.use("/collect", createCollectRouter(collectController));
         /* ^^ Caso haja necessidade de mais rotas, colocar aqui ^^ */
         // Ex:
         // app.use("/test", createTestRouter(testController));
