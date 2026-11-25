@@ -26,7 +26,7 @@ export async function connectDb(): Promise<Db> {
     await client.connect();
 
     // Determinando o banco de dados a ser manipulado
-    const db: Db = client.db("campanha-do-agasalho");
+    const db: Db = client.db("teste");
 
     // Extração das collections do banco de dados
     userCollection = db.collection<IUser>("user");

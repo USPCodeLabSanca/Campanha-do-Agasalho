@@ -2,6 +2,7 @@ import { AppError } from "../errors/AppError.js";
 import type { ICampaignProduct } from "../interfaces/IProduct.js";
 import { ProductService } from "../services/ProductService.js";
 import type { Request, Response } from "express";
+import { removeUndefined } from "../utils.js";
 
 export class ProductController {
     constructor(private productService: ProductService) {};
@@ -35,7 +36,7 @@ export class ProductController {
             images,
             isAvailable
         };
-
+        console.log("Chegou no try");
         try {
             const insertRes = await this.productService.insertProduct(productData);
 
@@ -88,8 +89,10 @@ export class ProductController {
             isAvailable
         };
 
+        const productData_defined = removeUndefined(productData);
+
         try {
-            const updateRes = await this.productService.updateProduct(id, productData);
+            const updateRes = await this.productService.updateProduct(id, productData_defined);
 
             if(!updateRes) {
                 throw new AppError("RESOURCE_NOT_FOUND");

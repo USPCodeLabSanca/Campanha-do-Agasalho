@@ -17,6 +17,8 @@ export class ProductService {
         try {
             return await this.productRepository.insertProduct(productData);
         } catch(error) {
+            console.log(error);
+            console.log("Erro service");
             throw new AppError("INTERNAL_SERVER_ERROR");
         }
     }
@@ -30,6 +32,10 @@ export class ProductService {
     }
 
     async updateProduct(id: string, productData: Partial<ICampaignProduct>): Promise<Boolean> {
-        return await this.productRepository.updateProduct(id, productData);
+        try {
+            return await this.productRepository.updateProduct(id, productData);
+        } catch(error) {
+            throw new AppError("INTERNAL_SERVER_ERROR");
+        }
     }
 }
