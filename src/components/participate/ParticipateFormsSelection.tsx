@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next'
 
 import { Button } from '../Button'
+import { useContacts } from '../../hooks/useContacts'
 import logo from '../../assets/images/logo_without_title.svg'
 import arrowIcon from '../../assets/images/arrow_up_right.svg'
 
 export function ParticipateFormsSelection() {
   const { t } = useTranslation()
+  const contacts = useContacts()
 
   return (
     <section
@@ -35,13 +37,17 @@ export function ParticipateFormsSelection() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button
-              variant="dark"
-              href={"https://www.instagram.com/instagasalho/"}
-              rightIcon={<img src={arrowIcon} alt="" />}
-            >
-              {t('participate.selection.instagram')}
-            </Button>
+            {/* O link vem dos contatos (editados no admin).
+                Se o Instagram estiver vazio, o botão não aparece */}
+            {contacts?.instagram && (
+              <Button
+                variant="dark"
+                href={contacts.instagram}
+                rightIcon={<img src={arrowIcon} alt="" />}
+              >
+                {t('participate.selection.instagram')}
+              </Button>
+            )}
             <Button variant="outlineDark" to="/como-ajudar">
               {t('participate.selection.help')}
             </Button>

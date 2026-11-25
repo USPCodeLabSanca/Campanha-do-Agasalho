@@ -68,15 +68,17 @@ export function Button({
     )
   }
   if (href) {
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={classes}
-      onClick={onClick}
-    >
-      {content}
-    </a>
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        onClick={onClick}
+      >
+        {content}
+      </a>
+    )
   }
 
   return (
