@@ -6,6 +6,7 @@ import {
   HouseIcon,
   MapPinIcon,
   ShoppingBagIcon,
+  UsersThreeIcon,
   type Icon,
 } from '@phosphor-icons/react'
 
@@ -47,6 +48,11 @@ export const adminPageGroups: AdminPageGroup[] = [
         path: '/admin/linha-do-tempo',
         label: 'Linha do tempo',
         icon: ClockCounterClockwiseIcon,
+      },
+      {
+        path: '/admin/participe',
+        label: 'Participe',
+        icon: UsersThreeIcon,
       },
     ],
   },

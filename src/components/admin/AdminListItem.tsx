@@ -8,7 +8,7 @@ type AdminListItemProps = {
     isPositive: boolean
   }
   onEdit: () => void
-  onDelete: () => void
+  onDelete?: () => void
 }
 
 const iconButtonClasses =
@@ -49,14 +49,16 @@ export function AdminListItem({
         >
           <PencilSimpleIcon size={20} aria-hidden="true" />
         </button>
-        <button
-          type="button"
-          className={`${iconButtonClasses} text-pink-1`}
-          aria-label={`Excluir ${title}`}
-          onClick={onDelete}
-        >
-          <TrashIcon size={20} aria-hidden="true" />
-        </button>
+        {onDelete && (
+          <button
+            type="button"
+            className={`${iconButtonClasses} text-pink-1`}
+            aria-label={`Excluir ${title}`}
+            onClick={onDelete}
+          >
+            <TrashIcon size={20} aria-hidden="true" />
+          </button>
+        )}
       </div>
     </li>
   )
