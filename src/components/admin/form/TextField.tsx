@@ -9,6 +9,8 @@ type TextFieldProps = {
   multiline?: boolean
   type?: 'text' | 'number'
   step?: number
+  min?: number
+  max?: number
 }
 
 export const inputClasses =
@@ -23,6 +25,8 @@ export function TextField({
   multiline,
   type = 'text',
   step,
+  min = 0,
+  max,
 }: TextFieldProps) {
   const id = useId()
   const helpId = `${id}-help`
@@ -52,7 +56,8 @@ export function TextField({
         <input
           {...fieldProps}
           type={type}
-          min={type === 'number' ? 0 : undefined}
+          min={type === 'number' ? min : undefined}
+          max={type === 'number' ? max : undefined}
           step={step}
           onChange={(event) => onChange(event.target.value)}
         />

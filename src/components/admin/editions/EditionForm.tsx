@@ -8,6 +8,7 @@ import {
   DESTINATION_LABELS,
   DESTINATION_TYPES,
 } from '../../../constants/impact'
+import { MAX_YEAR, MIN_YEAR } from '../../../constants/years'
 import type { DestinationType, Edition } from '../../../types/edition'
 
 type EditionFormProps = {
@@ -123,6 +124,8 @@ export function EditionForm({
         type="number"
         value={values.year}
         onChange={(value) => updateField('year', value)}
+        min={MIN_YEAR}
+        max={MAX_YEAR}
         required
       />
       <TextField

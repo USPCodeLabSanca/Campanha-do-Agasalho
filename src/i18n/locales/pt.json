@@ -137,34 +137,7 @@
       }
     },
     "history": {
-      "title": "Nossa história",
-      "milestones": {
-        "first": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "second": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "third": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "fourth": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        },
-        "fifth": {
-          "year": "2007",
-          "title": "Primeira edição",
-          "description": "Estudantes espalham as primeiras caixas de coleta pelo campus."
-        }
-      }
+      "title": "Nossa história"
     },
     "howItWorks": {
       "title": "Como funciona",

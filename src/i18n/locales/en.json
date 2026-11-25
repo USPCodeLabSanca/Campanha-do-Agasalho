@@ -137,34 +137,7 @@
       }
     },
     "history": {
-      "title": "Our story",
-      "milestones": {
-        "first": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "second": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "third": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "fourth": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        },
-        "fifth": {
-          "year": "2007",
-          "title": "First edition",
-          "description": "Students set up the first collection boxes around campus."
-        }
-      }
+      "title": "Our story"
     },
     "howItWorks": {
       "title": "How it works",
