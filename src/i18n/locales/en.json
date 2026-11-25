@@ -424,6 +424,39 @@
     "hero": {
       "title": "Join the drive!",
       "description": "Five teams take care of everything, from the collection box to the Instagram post. Find out where you fit in."
+    },
+    "nuclei": {
+      "title": "The five teams",
+      "items": {
+        "general": {
+          "title": "General",
+          "description": "Coordinates the campaign, connects the teams and tracks goals and deadlines for each edition."
+        },
+        "outreach": {
+          "title": "Outreach",
+          "description": "Creates posts, artwork and Instagram content, and plans strategies to reach more and more people."
+        },
+        "organizations": {
+          "title": "Student organizations",
+          "description": "Bridges the gap with USP student organizations and coordinates their participation in the campaign."
+        },
+        "external": {
+          "title": "External relations",
+          "description": "Manages resources and builds partnerships with the sponsors that make the project possible."
+        },
+        "infrastructure": {
+          "title": "Infrastructure",
+          "description": "Handles fundraising, manages the donation boxes and plans the big events."
+        }
+      }
+    },
+    "selection": {
+      "title": "Selection process",
+      "badge": "Applications closed",
+      "heading": "The selection process is not open right now",
+      "description": "Openings are announced once at the start of each semester. Follow the campaign on Instagram to find out about the next call — and, in the meantime, you can help by donating.",
+      "instagram": "Follow on Instagram",
+      "help": "Help in other ways"
     }
   }
 }
