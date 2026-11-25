@@ -85,7 +85,7 @@ export function AdminParticipate() {
     <div className="flex flex-col gap-6">
       <AdminPageHeader
         title="Participe"
-        description="Os núcleos da campanha e o processo seletivo da página Participe."
+        description="As inscrições e os núcleos da campanha, que aparecem na página Participe."
       />
 
       {isLoading && <p className="text-body">Carregando...</p>}
@@ -105,7 +105,7 @@ export function AdminParticipate() {
 
       {nuclei.length > 0 && (
         <section className="flex flex-col gap-3">
-          <h2 className="text-lg font-bold text-blue-1">Núcleos</h2>
+          <h2 className="text-h4">Núcleos</h2>
 
           <ul className="flex flex-col gap-3">
             {nuclei.map((nucleus) => (

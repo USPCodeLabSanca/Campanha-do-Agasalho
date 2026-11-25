@@ -1,6 +1,11 @@
 import { useState } from 'react'
+
+import { AdminDrawer } from '../AdminDrawer'
+import { TextField } from '../form/TextField'
+import { BilingualField } from '../form/BilingualField'
+
 import type { SelectionProcess } from '../../../types/participate'
-import { AdminFormModal, FormField, inputClasses } from './AdminFormModal'
+import type { TranslatedText } from '../../../types/translatedText'
 
 type SelectionProcessFormProps = {
   selection: SelectionProcess
@@ -9,13 +14,8 @@ type SelectionProcessFormProps = {
   onClose: () => void
 }
 
-function isValidUrl(value: string) {
-  try {
-    const url = new URL(value)
-    return url.protocol === 'http:' || url.protocol === 'https:'
-  } catch {
-    return false
-  }
+function trimText(text: TranslatedText): TranslatedText {
+  return { pt: text.pt.trim(), en: text.en.trim() }
 }
 
 export function SelectionProcessForm({
@@ -24,76 +24,62 @@ export function SelectionProcessForm({
   onSave,
   onClose,
 }: SelectionProcessFormProps) {
-  const [formUrl, setFormUrl] = useState(selection.formUrl)
-  const [messagePt, setMessagePt] = useState(selection.closedMessage.pt)
-  const [messageEn, setMessageEn] = useState(selection.closedMessage.en)
-  const [showErrors, setShowErrors] = useState(false)
+  const [values, setValues] = useState<SelectionProcess>(selection)
 
-  const urlError =
-    formUrl.trim() && !isValidUrl(formUrl.trim())
-      ? 'Use um link completo, começando com https://'
-      : undefined
-  const messageError = !messagePt.trim()
-    ? 'Informe a mensagem em português.'
-    : undefined
+  function updateField<Key extends keyof SelectionProcess>(
+    key: Key,
+    value: SelectionProcess[Key],
+  ) {
+    setValues((prev) => ({ ...prev, [key]: value }))
+  }
 
   function handleSubmit() {
-    if (urlError || messageError) {
-      setShowErrors(true)
-      return
-    }
-
     onSave({
       isOpen: selection.isOpen,
-      formUrl: formUrl.trim(),
-      closedMessage: { pt: messagePt.trim(), en: messageEn.trim() },
+      formUrl: values.formUrl.trim(),
+      deadline: values.deadline,
+      openMessage: trimText(values.openMessage),
+      closedMessage: trimText(values.closedMessage),
     })
   }
 
   return (
-    <AdminFormModal
-      title="Editar processo seletivo"
+    <AdminDrawer
+      title="Editar inscrições"
       isSaving={isSaving}
       onSubmit={handleSubmit}
       onClose={onClose}
     >
-      <FormField
+      <TextField
         label="Link do formulário de inscrição"
-        hint="Para onde o botão de inscrição leva quando as inscrições estão abertas."
-        error={showErrors ? urlError : undefined}
-      >
-        <input
-          type="url"
-          className={inputClasses}
-          value={formUrl}
-          placeholder="https://"
-          onChange={(e) => setFormUrl(e.target.value)}
-        />
-      </FormField>
+        type="url"
+        value={values.formUrl}
+        onChange={(value) => updateField('formUrl', value)}
+        required={selection.isOpen}
+        help="O link do Google Forms, começando com https://. É para onde o botão de inscrição leva."
+      />
+      <TextField
+        label="Inscrições até"
+        type="date"
+        value={values.deadline}
+        onChange={(value) => updateField('deadline', value)}
+        help='Opcional. Aparece no site como "Inscrições até 15 de março".'
+      />
 
-      <FormField
-        label="Mensagem com inscrições fechadas (português)"
-        error={showErrors ? messageError : undefined}
-      >
-        <textarea
-          rows={4}
-          className={inputClasses}
-          value={messagePt}
-          onChange={(e) => setMessagePt(e.target.value)}
-        />
-      </FormField>
-
-      <FormField
-        label="Mensagem com inscrições fechadas (inglês)"
-        hint="Se ficar vazio, o site mostra a mensagem em português."
-      >
-        <textarea
-          rows={4}
-          className={inputClasses}
-          value={messageEn}
-          onChange={(e) => setMessageEn(e.target.value)}
-        />
-      </FormField>
-    </AdminFormModal>
+      <BilingualField
+        label="Mensagem com inscrições abertas"
+        value={values.openMessage}
+        onChange={(value) => updateField('openMessage', value)}
+        required
+        multiline
+      />
+      <BilingualField
+        label="Mensagem com inscrições fechadas"
+        value={values.closedMessage}
+        onChange={(value) => updateField('closedMessage', value)}
+        required
+        multiline
+      />
+    </AdminDrawer>
   )
 }
