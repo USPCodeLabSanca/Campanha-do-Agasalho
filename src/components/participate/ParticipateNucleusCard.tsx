@@ -15,7 +15,7 @@ export function NucleusCard({ image, title, description }: NucleusCardProps) {
       />
       <div className="min-w-0">
         <h3 className="text-h4 break-words">{title}</h3>
-        <p className="text-small mt-2">{description}</p>
+        <p className="mt-2 text-small">{description}</p>
       </div>
     </article>
   )
