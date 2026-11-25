@@ -1,7 +1,5 @@
 import type { ProductCategory } from '../types/product'
 
-export const WHATSAPP_NUMBER = '5516900000000'
-
 export const MAX_QUANTITY = 10
 
 export const CLOTHING_SIZES = ['PP', 'P', 'M', 'G', 'GG']

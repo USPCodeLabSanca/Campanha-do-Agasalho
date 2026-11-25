@@ -5,7 +5,8 @@ import { TrashIcon, WhatsappLogoIcon, XIcon } from '@phosphor-icons/react'
 import { ProductImage } from './ProductImage'
 import { QuantityStepper } from './QuantityStepper'
 
-import { WHATSAPP_NUMBER } from '../../constants/shop'
+import { useContacts } from '../../hooks/useContacts'
+import { getWhatsappUrl } from '../../utils/getWhatsappUrl'
 import type { BagItem } from '../../types/bag'
 import { formatPrice } from '../../utils/formatPrice'
 
@@ -29,6 +30,7 @@ export function BagDrawer({
   const { t, i18n } = useTranslation()
   const dialogRef = useRef<HTMLDialogElement>(null)
   const [hasSent, setHasSent] = useState(false)
+  const contacts = useContacts()
   const language = i18n.resolvedLanguage
 
   useEffect(() => {
@@ -67,7 +69,9 @@ export function BagDrawer({
   }
 
   const message = buildMessage()
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  const whatsappUrl = contacts?.whatsapp
+    ? getWhatsappUrl(contacts.whatsapp, message)
+    : undefined
 
   return (
     <dialog
