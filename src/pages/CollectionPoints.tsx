@@ -17,7 +17,7 @@ export function CollectionPoints() {
         image={floqCollectionBox}
         variant="pink"
       />
-      <CollectionPointsSection/>
+      <CollectionPointsSection />
     </>
   )
 }

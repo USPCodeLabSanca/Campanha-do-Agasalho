@@ -1,11 +1,15 @@
-import type { CollectionPoint, LatLng } from '../types/collectionPoint'
+import type {
+  CollectionPoint,
+  LatLng,
+  MappablePoint,
+} from '../types/collectionPoint'
+
+export function hasCoords(point: CollectionPoint): point is MappablePoint {
+  return typeof point.lat === 'number' && typeof point.lng === 'number'
+}
 
 export function normalize(text: string) {
-  return text
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .trim()
+  return text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim()
 }
 
 export function distanceKm(a: LatLng, b: LatLng) {
