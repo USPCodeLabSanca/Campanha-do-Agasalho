@@ -90,9 +90,6 @@ export function ParticipateFormsSelection() {
                   rightIcon={<ArrowUpRightIcon size={20} weight="bold" />}
                 >
                   {t('participate.selection.open.apply')}
-                  <span className="sr-only">
-                    {t('participate.selection.open.newTab')}
-                  </span>
                 </Button>
               ) : (
                 contacts?.instagram && (

@@ -30,7 +30,12 @@ export function BilingualField({
     <fieldset className="flex flex-col gap-3 rounded-2xl border border-gray-2 p-4">
       <legend className="px-1 text-strong">
         {label}
-        {required && <span className="text-pink-1"> *</span>}
+        {required && (
+          <span aria-hidden="true" className="text-pink-1">
+            {' '}
+            *
+          </span>
+        )}
       </legend>
 
       <div className="grid gap-3 sm:grid-cols-2">

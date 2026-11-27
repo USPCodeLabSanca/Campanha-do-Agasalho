@@ -76,7 +76,7 @@ export function Footer() {
                       href={contacts?.[social.key]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={t(social.labelKey)}
+                      aria-label={`${t(social.labelKey)} ${t('newTab')}`}
                       className="transition hover:text-orange-1"
                     >
                       <CurrentIcon size={32} aria-hidden="true" />
@@ -102,6 +102,7 @@ export function Footer() {
                 className="text-codelab hover:underline"
               >
                 USPCodeLab Sanca
+                <span className="sr-only"> {t('newTab')}</span>
               </a>
             </p>
             <img src={logoCodeLab} alt="" className="h-8" />

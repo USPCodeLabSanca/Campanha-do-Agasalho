@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
 type ButtonVariant =
@@ -47,6 +48,7 @@ export function Button({
   disabled,
   type = 'button',
 }: ButtonProps) {
+  const { t } = useTranslation()
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]}`
 
   const content = (
@@ -77,6 +79,7 @@ export function Button({
         onClick={onClick}
       >
         {content}
+        <span className="sr-only"> {t('newTab')}</span>
       </a>
     )
   }

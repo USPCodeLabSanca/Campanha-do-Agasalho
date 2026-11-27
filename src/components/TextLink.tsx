@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
 type TextLinkProps = {
@@ -9,6 +10,7 @@ const classes =
   'inline-flex items-center gap-1 text-button text-blue-1 transition hover:text-orange-2'
 
 export function TextLink({ children, to }: TextLinkProps) {
+  const { t } = useTranslation()
   const content = (
     <>
       <span className="underline decoration-orange-1 decoration-2 underline-offset-4">
@@ -27,6 +29,7 @@ export function TextLink({ children, to }: TextLinkProps) {
         className={classes}
       >
         {content}
+        <span className="sr-only"> {t('newTab')}</span>
       </a>
     )
   }
