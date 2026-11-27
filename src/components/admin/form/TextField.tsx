@@ -45,7 +45,12 @@ export function TextField({
     <div className="flex flex-col gap-1">
       <label htmlFor={id} className="text-strong">
         {label}
-        {required && <span className="text-pink-1"> *</span>}
+        {required && (
+          <span aria-hidden="true" className="text-pink-1">
+            {' '}
+            *
+          </span>
+        )}
       </label>
 
       {multiline ? (
