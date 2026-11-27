@@ -186,7 +186,7 @@ export function BagDrawer({
               >
                 <WhatsappLogoIcon size={24} aria-hidden="true" />
                 {t('shop.bag.send')}
-                <span className="sr-only">{t('shop.bag.newTab')}</span>
+                <span className="sr-only"> {t('newTab')}</span>
               </a>
               {hasSent ? (
                 <div
