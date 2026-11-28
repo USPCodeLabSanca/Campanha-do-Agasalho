@@ -31,7 +31,7 @@ export function BilingualField({
       <legend className="px-1 text-strong">
         {label}
         {required && (
-          <span aria-hidden="true" className="text-pink-1">
+          <span aria-hidden="true" className="text-pink-0">
             {' '}
             *
           </span>

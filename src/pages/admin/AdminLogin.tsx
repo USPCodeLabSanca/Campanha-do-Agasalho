@@ -10,7 +10,7 @@ import logo from '../../assets/images/logo.svg'
 import floqWelcome from '../../assets/images/floq_welcome_admin.svg'
 
 const inputClasses =
-  'w-full rounded-lg border border-gray-1 bg-white px-4 py-3 text-body placeholder:text-blue-4/70'
+  'w-full rounded-lg border border-blue-1/60 bg-white px-4 py-3 text-body placeholder:text-blue-1/70'
 
 export function AdminLogin() {
   const navigate = useNavigate()

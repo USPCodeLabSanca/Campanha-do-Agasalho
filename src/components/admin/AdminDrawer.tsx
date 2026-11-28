@@ -69,7 +69,7 @@ export function AdminDrawer({
 
         <div className="flex flex-1 flex-col gap-5 overflow-y-auto p-4">
           <p className="text-small text-blue-4">
-            Campos com <span className="text-pink-1">*</span> são obrigatórios.
+            Campos com <span className="text-pink-0">*</span> são obrigatórios.
           </p>
           {children}
         </div>

@@ -29,7 +29,7 @@ export function AdminStatCard({
       </span>
       <span className="text-h2">{value}</span>
       <span
-        className={`mt-auto text-small ${isWarning ? 'font-bold text-pink-1' : 'text-blue-4'}`}
+        className={`mt-auto text-small ${isWarning ? 'font-bold text-pink-0' : 'text-blue-4'}`}
       >
         {detail}
       </span>

@@ -183,7 +183,7 @@ export function EditionForm({
 
         {hasDestinations && (
           <p
-            className={`text-strong ${totalPercentage === 100 ? 'text-blue-1' : 'text-pink-1'}`}
+            className={`text-strong ${totalPercentage === 100 ? 'text-blue-1' : 'text-pink-0'}`}
           >
             Total: {totalPercentage}%
           </p>
