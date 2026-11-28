@@ -1,5 +1,7 @@
 {
   "title": "Campanha do Agasalho",
+  "siteName": "Campanha USP do Agasalho",
+  "skipToContent": "Pular para o conteúdo",
   "newTab": "(abre em uma nova aba)",
   "language": {
     "label": "Idioma"
@@ -488,6 +490,7 @@
     "goTo": "Ir para a foto {{number}}"
   },
   "notFound": {
+    "pageTitle": "Página não encontrada",
     "title": "Ops! Essa página se perdeu na neve",
     "description": "O link pode estar errado ou a página mudou de lugar. Que tal recomeçar por aqui?",
     "home": "Voltar ao início",

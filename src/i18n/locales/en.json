@@ -1,5 +1,7 @@
 {
   "title": "Winter Clothing Drive",
+  "siteName": "USP Winter Clothing Drive",
+  "skipToContent": "Skip to content",
   "newTab": "(opens in a new tab)",
   "language": {
     "label": "Language"
@@ -488,6 +490,7 @@
     "goTo": "Go to photo {{number}}"
   },
   "notFound": {
+    "pageTitle": "Page not found",
     "title": "Oops! This page got lost in the snow",
     "description": "The link may be broken or the page has moved. How about starting over from here?",
     "home": "Back to home",
