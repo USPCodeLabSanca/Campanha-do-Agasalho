@@ -156,7 +156,7 @@ export function BagDrawer({
                 <button
                   type="button"
                   onClick={onClear}
-                  className="flex cursor-pointer items-center gap-1 text-small font-bold text-blue-4 transition hover:text-orange-2"
+                  className="flex cursor-pointer items-center gap-1 text-small font-bold text-blue-4 transition hover:text-blue-1"
                 >
                   <TrashIcon size={16} aria-hidden="true" />
                   {t('shop.bag.clear')}
@@ -197,7 +197,7 @@ export function BagDrawer({
                   <button
                     type="button"
                     onClick={onClear}
-                    className="cursor-pointer font-bold underline decoration-orange-1 decoration-2 underline-offset-4 transition hover:text-orange-2"
+                    className="cursor-pointer font-bold underline decoration-orange-1 decoration-2 underline-offset-4 transition hover:text-blue-4"
                   >
                     {t('shop.bag.clear')}
                   </button>

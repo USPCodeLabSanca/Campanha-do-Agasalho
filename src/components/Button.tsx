@@ -33,7 +33,7 @@ const variantClasses = {
     'bg-transparent text-white border-white hover:bg-white hover:text-blue-1',
   outlineDark:
     'bg-transparent text-blue-1 border-blue-1 hover:bg-blue-1 hover:text-white',
-  pink: 'bg-pink-1 text-white border-transparent hover:brightness-95',
+  pink: 'bg-pink-0 text-white border-transparent hover:brightness-95',
   green: 'bg-green-1 text-blue-1 border-transparent hover:brightness-95',
 }
 

@@ -15,7 +15,7 @@ type TextFieldProps = {
 }
 
 export const inputClasses =
-  'w-full rounded-xl border border-gray-2 bg-white px-3 py-2 text-body'
+  'w-full rounded-xl border border-blue-1/60 bg-white px-3 py-2 text-body'
 
 export function TextField({
   label,
@@ -46,7 +46,7 @@ export function TextField({
       <label htmlFor={id} className="text-strong">
         {label}
         {required && (
-          <span aria-hidden="true" className="text-pink-1">
+          <span aria-hidden="true" className="text-pink-0">
             {' '}
             *
           </span>

@@ -6,17 +6,21 @@ type TextLinkProps = {
   to: string
 }
 
-const classes =
-  'inline-flex items-center gap-1 text-button text-blue-1 transition hover:text-orange-2'
+const classes = 'group inline-flex items-center gap-1 text-button text-blue-1'
 
 export function TextLink({ children, to }: TextLinkProps) {
   const { t } = useTranslation()
   const content = (
     <>
-      <span className="underline decoration-orange-1 decoration-2 underline-offset-4">
+      <span className="underline decoration-orange-1 decoration-2 underline-offset-4 transition-all group-hover:decoration-orange-2 group-hover:decoration-4">
         {children}
       </span>
-      <span aria-hidden="true">→</span>
+      <span
+        aria-hidden="true"
+        className="inline-block transition-transform motion-safe:group-hover:translate-x-1"
+      >
+        →
+      </span>
     </>
   )
 

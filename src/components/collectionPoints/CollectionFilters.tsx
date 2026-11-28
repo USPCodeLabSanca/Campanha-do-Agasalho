@@ -14,7 +14,7 @@ type CollectionFiltersProps = {
 }
 
 const fieldClasses =
-  'h-11 w-full rounded-lg border border-blue-1/30 bg-white px-3 text-blue-1 placeholder:text-blue-1/50 focus:border-blue-1'
+  'h-11 w-full rounded-lg border border-blue-1/60 bg-white px-3 text-blue-1 placeholder:text-blue-1/70 focus:border-blue-1'
 
 export function CollectionFilters({
   search,

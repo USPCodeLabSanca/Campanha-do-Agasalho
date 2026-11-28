@@ -71,7 +71,7 @@ export function ImpactBarChart({ editions, selected }: ImpactBarChartProps) {
           {editions.map((edition) => (
             <span
               key={edition.year}
-              className={`min-w-0 flex-1 text-center text-small ${selected === edition.year ? 'font-bold text-orange-2' : ''}`}
+              className={`min-w-0 flex-1 text-center text-small ${selected === edition.year ? 'font-bold underline decoration-orange-1 decoration-2 underline-offset-4' : ''}`}
             >
               {edition.year}
             </span>
