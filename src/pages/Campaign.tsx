@@ -1,6 +1,4 @@
-import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useLocation } from 'react-router'
 
 import { PageHero } from '../components/PageHero'
 import { CampaignValues } from '../components/campaign/CampaignValues'
@@ -12,13 +10,6 @@ import floqGroup from '../assets/images/floq_group.svg'
 
 export function Campaign() {
   const { t } = useTranslation()
-  const { hash } = useLocation()
-
-  useEffect(() => {
-    if (hash) {
-      document.querySelector(hash)?.scrollIntoView()
-    }
-  }, [hash])
 
   return (
     <>

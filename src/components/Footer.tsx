@@ -77,7 +77,7 @@ export function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${t(social.labelKey)} ${t('newTab')}`}
-                      className="transition hover:text-orange-1"
+                      className="block rounded-sm transition hover:text-orange-1"
                     >
                       <CurrentIcon size={32} aria-hidden="true" />
                     </a>
