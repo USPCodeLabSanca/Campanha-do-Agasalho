@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ArrowUpRightIcon } from '@phosphor-icons/react'
+import { ArrowUpRightIcon, ClockIcon } from '@phosphor-icons/react'
 
 import type { CollectionPoint } from '../../types/collectionPoint'
 import { googleMapsUrl } from '../../utils/collectionPoints'
@@ -35,14 +35,17 @@ export const CollectionPointCard = forwardRef<
 
       <p className="text-small text-blue-1/80">{point.address}</p>
 
-      <p className="text-small text-orange-2">
-        {point.hours}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-small">
+        <p className="inline-flex items-center gap-1.5 rounded-full bg-orange-3 px-3 py-1 font-bold">
+          <ClockIcon size={16} aria-hidden="true" className="shrink-0" />
+          {point.hours}
+        </p>
         {distanceKm !== undefined && (
-          <span className="ml-2 text-blue-1/70">
-            · {t('collection.card.distance', { km: distanceKm.toFixed(1) })}
-          </span>
+          <p className="text-blue-1/70">
+            {t('collection.card.distance', { km: distanceKm.toFixed(1) })}
+          </p>
         )}
-      </p>
+      </div>
 
       <div className="flex flex-wrap gap-3">
         <Button

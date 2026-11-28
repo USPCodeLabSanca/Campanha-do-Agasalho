@@ -147,7 +147,10 @@ export function CollectionPointsSection() {
         />
 
         {geoError && (
-          <p role="alert" className="text-strong text-pink-1">
+          <p
+            role="alert"
+            className="rounded-xl bg-pink-4 p-3 text-strong text-blue-1"
+          >
             {t(`collection.geoError.${geoError}`)}
           </p>
         )}
@@ -172,7 +175,10 @@ export function CollectionPointsSection() {
               <p className="text-body">{t('collection.loading')}</p>
             )}
             {loadStatus === 'error' && (
-              <p role="alert" className="text-body text-pink-1">
+              <p
+                role="alert"
+                className="rounded-xl bg-pink-4 p-3 text-body text-blue-1"
+              >
                 {t('collection.loadError')}
               </p>
             )}

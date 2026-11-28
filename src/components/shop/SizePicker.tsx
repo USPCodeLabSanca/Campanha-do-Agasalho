@@ -43,7 +43,7 @@ export function SizePicker({
 
       {sizeGuide && (
         <details className="mt-3">
-          <summary className="w-fit cursor-pointer text-small font-bold underline decoration-orange-1 decoration-2 underline-offset-4 transition hover:text-orange-2">
+          <summary className="w-fit cursor-pointer text-small font-bold underline decoration-orange-1 decoration-2 underline-offset-4 transition hover:text-blue-4">
             {t('shop.dialog.sizeGuide.toggle')}
           </summary>
           <div className="mt-3">
