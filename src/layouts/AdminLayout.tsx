@@ -1,11 +1,24 @@
 import { useEffect, useState } from 'react'
-import { Outlet } from 'react-router'
+import { Outlet, useLocation } from 'react-router'
 
 import { AdminHeader } from '../components/admin/AdminHeader'
 import { AdminSidebar } from '../components/admin/AdminSidebar'
 
+import { adminPageGroups } from '../constants/adminPages'
+
 export function AdminLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { pathname } = useLocation()
+
+  const currentPath = pathname.replace(/\/$/, '')
+  const page = adminPageGroups
+    .flatMap((group) => group.pages)
+    .find((item) => item.path === currentPath)
+  const title = `${page?.label ?? 'Área administrativa'} | Admin - Campanha USP do Agasalho`
+
+  useEffect(() => {
+    document.title = title
+  }, [title])
 
   function toggleMenu() {
     setIsMenuOpen((prev) => !prev)
